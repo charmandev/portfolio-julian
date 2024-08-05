@@ -1,0 +1,58 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to s3
+
+on:
+  # Runs on pushes targeting the default branch
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - 'aws-s3/web/**' 
+
+jobs:
+  terraform:
+    name: push web on s3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Move your files to a temporary directory
+        run: |
+          mkdir -p ../temp
+          mv * ../temp/
+ 
+      - name: Checkout private tools
+        uses: actions/checkout@v4
+        with:
+          repository: charmandev/auto-web-to-s3
+          token: ${{ secrets.GH_PAT }}
+
+
+      - name: Mover todos los files
+        run: |
+          cd ../temp
+          mv * ../$REPO/aws-s3/web/
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+        with: 
+          terraform_version: 1.0.0
+
+      - name: Configure AWS credentials
+        run: |
+          aws --version
+          mkdir -p ~/.aws
+          echo "[default]" > ~/.aws/credentials
+          echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID_1600 }}" >> ~/.aws/credentials
+          echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY_1600 }}" >> ~/.aws/credentials
+
+      - name: Terraform init and apply
+        run: |
+          cd aws-s3
+          ls && pwd
+          terraform init
+          terraform apply -auto-approve
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_1600 }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_1600 }}
