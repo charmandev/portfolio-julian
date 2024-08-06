@@ -1,30 +1,31 @@
+/* Estilos específicos para el contenedor del código */
 .contenedorCodigo {
   flex: 1; /* Permite que el contenedor use todo el espacio disponible */
-  margin: 50px;
-  background-image: radial-gradient(
+  margin: 50px auto; /* Centra el contenedor horizontalmente y agrega margen */
+  max-width: 800px; /* Establece un ancho máximo para el contenedor */
+  background: radial-gradient(
     circle farthest-corner at 10% 20%,
     rgba(100, 43, 115, 1) 0%,
     rgba(4, 0, 4, 1) 90%
-  );
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  font-family: monospace; /* Usa una fuente de tipo monoespaciado para el código */
-  white-space: pre-wrap; /* Mantiene los saltos de línea y los espacios en blanco */
-  word-wrap: break-word; /* Ajusta el texto dentro del contenedor sin scroll */
+  ); /* Fondo degradado atractivo */
+  color: white; /* Color del texto del código */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 12px; /* Bordes redondeados para el contenedor */
+  border: 1px solid #444; /* Añade un borde sutil para resaltar el contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil para el contenedor */
+  font-family: "Fira Code", monospace; /* Usa una fuente monoespaciada para el código */
+  overflow: hidden; /* Elimina el scroll horizontal */
   box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho y alto */
-  display: flex; /* Usa flexbox para manejar el contenido interno */
-  align-items: center; /* Centra el contenido verticalmente */
-  justify-content: center; /* Centra el contenido horizontalmente */
 }
 
 pre {
   margin: 0; /* Elimina el margen predeterminado de <pre> */
-  white-space: pre-wrap; /* Asegura que los saltos de línea y espacios se mantengan */
-  width: 100%; /* Asegura que <pre> ocupe todo el ancho del contenedor */
+  overflow: auto; /* Permite scroll vertical si el contenido es muy alto */
 }
 
 code {
-  margin: 50px;
   display: block; /* Asegúrate de que <code> ocupe todo el espacio de <pre> */
+  overflow-wrap: break-word; /* Ajusta el texto largo dentro del contenedor */
+  white-space: pre-wrap; /* Mantiene los saltos de línea y los espacios en blanco */
+  background: transparent; /* Asegúrate de que el fondo del código sea transparente */
 }

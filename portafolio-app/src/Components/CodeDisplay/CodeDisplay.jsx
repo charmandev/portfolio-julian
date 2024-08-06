@@ -1,11 +1,22 @@
-import React from "react";
-import "./CodeDisplay.css"; // Asegúrate de tener este archivo CSS para los estilos
+import React, { useEffect, useRef } from "react";
+import Prism from "prismjs";
+import "prismjs/themes/prism-tomorrow.css"; // Asegúrate de que este archivo CSS esté disponible
 
 const CodeDisplay = () => {
+  const codeRef = useRef(null);
+
+  useEffect(() => {
+    if (codeRef.current) {
+      Prism.highlightElement(codeRef.current);
+    }
+  }, []);
+
   const coderCode = `
 const coder = {
     name: 'Abu Said',
-    skills: ['React', 'NextJS', 'Redux', 'Express', 'NestJS', 'MySql', 'MongoDB', 'Docker', 'AWS'],
+    skills: ['React','NextJS','Redux','Express','NestJS','MySql',
+    'MongoDB','Docker','AWS'
+    ],
     hardWorker: true,
     quickLearner: true,
     problemSolver: true,
@@ -22,7 +33,9 @@ const coder = {
   return (
     <div className="contenedorCodigo">
       <pre>
-        <code>{coderCode}</code>
+        <code ref={codeRef} className="language-js">
+          {coderCode}
+        </code>
       </pre>
     </div>
   );
