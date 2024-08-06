@@ -48,8 +48,8 @@ jobs:
           npm ci
           npm run build
           cd dist
-          ls ../../
-          mv * ../../$REPO/aws-s3/web/
+          ls ../../../
+          mv * ../../../$REPO/aws-s3/web/
 
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
