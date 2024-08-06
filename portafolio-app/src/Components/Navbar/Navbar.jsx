@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import "./Navbar.css"; // Asegúrate de que este archivo CSS esté en el mismo directorio o ajusta la ruta según corresponda
+import "./Navbar.css"; // Asegúrate de que este archivo CSS esté correctamente importado
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <nav className="navbar">
       <div className="container">
         <a href="#" className="navbar-brand">
-          Julian
+          MiLogo
         </a>
         <button
           className="navbar-toggler"
@@ -19,7 +21,7 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className={`navbar-menu ${isOpen ? "open" : ""}`}>
+        <div className={`navbar-menu ${isOpen ? "active" : ""}`}>
           <ul className="navbar-nav">
             <li className="nav-item">
               <a href="#" className="nav-link">

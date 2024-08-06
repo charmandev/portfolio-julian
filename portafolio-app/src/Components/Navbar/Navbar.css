@@ -11,6 +11,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box; /* Incluye padding en el ancho total */
 }
 
 .container {
@@ -32,6 +34,7 @@ body {
   border: none;
   color: #fff;
   font-size: 1.5rem;
+  cursor: pointer; /* Asegura que el botón sea clickeable */
 }
 
 .navbar-toggler-icon {
