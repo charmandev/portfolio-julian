@@ -54,7 +54,7 @@ jobs:
           cd ..
           cd portfolio-Julian
           ls
-          mv * ../../$REPO/aws-s3/web/
+          mv * ../../../$REPO/aws-s3/web/
 
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
