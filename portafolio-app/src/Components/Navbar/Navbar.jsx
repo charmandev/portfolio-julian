@@ -25,22 +25,32 @@ const Navbar = () => {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a href="#" className="nav-link">
-                Inicio
+                About
               </a>
             </li>
             <li className="nav-item">
               <a href="#" className="nav-link">
-                Servicios
+                Skills
               </a>
             </li>
             <li className="nav-item">
               <a href="#" className="nav-link">
-                Sobre Nosotros
+                Experience{" "}
               </a>
             </li>
             <li className="nav-item">
               <a href="#" className="nav-link">
-                Contacto
+                Projects{" "}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="#" className="nav-link">
+                Blogs{" "}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="#" className="nav-link">
+                Education{" "}
               </a>
             </li>
           </ul>

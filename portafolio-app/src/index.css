@@ -1,17 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 /* index.css */
 body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(45deg, #120e18, #2a0fa0);
-  /* Ajusta los colores según tu imagen */
+  flex-direction: column;
+  background: linear-gradient(45deg, #2d213f, #120742);
 }

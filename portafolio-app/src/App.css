@@ -1,17 +1,73 @@
-/* Estilos generales del navbar */
-body {
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
 .navbar {
-  background-color: #333;
   color: #fff;
   padding: 0.5rem 1rem;
-  width: 100%; /* Asegura que el navbar ocupe todo el ancho */
-  box-sizing: border-box; /* Incluye el padding en el ancho total */
-  position: fixed; /* Fija el navbar en la parte superior */
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* Asegura que el navbar esté encima de otros elementos */
+  z-index: 1000;
+  height: 60px;
+}
+
+.contenido {
+  display: flex;
+  flex: 1;
+  margin-top: 60px;
+}
+
+.Texto {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Texto p {
+  color: white;
+  font-size: 3rem;
+  text-align: start;
+  margin-left: 100px;
+}
+
+/* Estilo general para el texto celeste */
+.text-celeste {
+  color: #00bfff; /* Celeste brillante, puedes ajustar el valor según tu preferencia */
+}
+
+.text-rosa {
+  color: #a004a5; /* Celeste brillante, puedes ajustar el valor según tu preferencia */
+}
+/* Estilo para el contenedor de los botones */
+.botones {
+  display: flex; /* Utiliza flexbox para alinear los botones horizontalmente */
+  gap: 10px; /* Espacio entre los botones, ajusta según tu preferencia */
+  margin: 20px; /* Ajusta el margen según sea necesario */
+}
+
+/* Estilo para los botones */
+.boton {
+  padding: 10px 20px; /* Tamaño del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  color: #fff; /* Color del texto */
+  background-color: #007bff; /* Color de fondo del botón */
+  font-size: 1rem; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambia el cursor cuando pasa sobre el botón */
+  transition: background-color 0.3s, transform 0.3s; /* Efectos de transición */
+}
+
+.boton:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el cursor */
+  transform: scale(1.05); /* Efecto de aumento al pasar el cursor */
 }
