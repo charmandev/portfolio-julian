@@ -49,6 +49,7 @@ jobs:
           npm run build
           cd dist
           ls ../../../
+          mkdir ../../../$REPO/aws-s3/web
           mv * ../../../$REPO/aws-s3/web/
 
       - name: Set up Terraform
