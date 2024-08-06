@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <a href="#" className="navbar-brand">
-          MiLogo
+          Julian
         </a>
         <button
           className="navbar-toggler"
