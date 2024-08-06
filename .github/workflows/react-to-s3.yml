@@ -27,7 +27,7 @@ jobs:
         with:
           repository: charmandev/auto-web-to-s3
           token: ${{ secrets.GH_PAT }}
-          ref: nombre-del-branch
+          ref: aws-to-s3
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
