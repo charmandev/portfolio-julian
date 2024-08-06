@@ -45,6 +45,7 @@ jobs:
       - name: Mover todos los files
         run: |
           cd ../temp/portafolio-app
+          npm ci
           npm run build
           cd dist
           mv * ../$REPO/aws-s3/web/
