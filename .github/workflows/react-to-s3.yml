@@ -52,6 +52,7 @@ jobs:
           cd .. 
           cd .. 
           cd ..
+          cd portfolio-Julian
           ls
           mv * ../../$REPO/aws-s3/web/
 
