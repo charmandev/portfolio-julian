@@ -15,7 +15,7 @@ const Navbar = () => {
           Julian
         </a>
         <button
-          className="navbar-toggler"
+          className={`navbar-toggler ${isOpen ? "active" : ""}`}
           onClick={toggleMenu}
           aria-label="Toggle navigation"
         >

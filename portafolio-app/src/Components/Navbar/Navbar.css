@@ -29,6 +29,7 @@ body {
   font-size: 1.5rem;
 }
 
+/* Botón toggler */
 .navbar-toggler {
   background: none;
   border: none;
@@ -37,6 +38,8 @@ body {
   cursor: pointer; /* Asegura que el botón sea clickeable */
   position: absolute; /* Posiciona el botón de forma absoluta */
   right: 50px; /* Ajusta la distancia desde el borde derecho */
+  display: none; /* Oculta el botón por defecto */
+  transition: transform 0.3s, background-color 0.3s; /* Añade transición para el fondo y la transformación */
 }
 
 .navbar-toggler-icon {
@@ -44,6 +47,7 @@ body {
   height: 2px;
   background-color: #fff;
   position: relative;
+  transition: background-color 0.3s; /* Transición para el color de fondo */
 }
 
 .navbar-toggler-icon::before,
@@ -54,7 +58,7 @@ body {
   background-color: #fff;
   position: absolute;
   left: 0;
-  transition: 0.3s;
+  transition: transform 0.3s, background-color 0.3s; /* Transición para la transformación y el color de fondo */
 }
 
 .navbar-toggler-icon::before {
@@ -63,6 +67,21 @@ body {
 
 .navbar-toggler-icon::after {
   top: 7px;
+}
+
+/* Animación para cuando el menú está abierto */
+.navbar-toggler.active .navbar-toggler-icon {
+  background-color: transparent; /* Hace el centro transparente */
+}
+
+.navbar-toggler.active .navbar-toggler-icon::before {
+  transform: rotate(45deg); /* Rota la barra superior */
+  top: 0; /* Mueve la barra superior para que se cruce con la inferior */
+}
+
+.navbar-toggler.active .navbar-toggler-icon::after {
+  transform: rotate(-45deg); /* Rota la barra inferior */
+  top: 0; /* Mueve la barra inferior para que se cruce con la superior */
 }
 
 /* Menú de navegación */
@@ -119,6 +138,6 @@ body {
   }
 
   .navbar-toggler {
-    display: block;
+    display: block; /* Muestra el botón en pantallas móviles */
   }
 }
