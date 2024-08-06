@@ -35,39 +35,55 @@
 
 .Texto p {
   color: white;
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-align: start;
+  font-weight: 700;
   margin-left: 100px;
 }
 
-/* Estilo general para el texto celeste */
 .text-celeste {
-  color: #00bfff; /* Celeste brillante, puedes ajustar el valor según tu preferencia */
+  color: #00bfff;
 }
 
 .text-rosa {
-  color: #a004a5; /* Celeste brillante, puedes ajustar el valor según tu preferencia */
-}
-/* Estilo para el contenedor de los botones */
-.botones {
-  display: flex; /* Utiliza flexbox para alinear los botones horizontalmente */
-  gap: 10px; /* Espacio entre los botones, ajusta según tu preferencia */
-  margin: 20px; /* Ajusta el margen según sea necesario */
+  color: #a004a5;
 }
 
-/* Estilo para los botones */
+.botones {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+
 .boton {
-  padding: 10px 20px; /* Tamaño del botón */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Bordes redondeados */
-  color: #fff; /* Color del texto */
-  background-color: #007bff; /* Color de fondo del botón */
-  font-size: 1rem; /* Tamaño de la fuente */
-  cursor: pointer; /* Cambia el cursor cuando pasa sobre el botón */
-  transition: background-color 0.3s, transform 0.3s; /* Efectos de transición */
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .boton:hover {
-  background-color: #0056b3; /* Color de fondo al pasar el cursor */
-  transform: scale(1.05); /* Efecto de aumento al pasar el cursor */
+  transform: scale(1.1);
+  background-color: #1671d3;
+}
+
+.boton svg {
+  font-size: 2.5rem;
+}
+
+.CodeDescripcion {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,0 +1,30 @@
+.contenedorCodigo {
+  flex: 1; /* Permite que el contenedor use todo el espacio disponible */
+  margin: 50px;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(100, 43, 115, 1) 0%,
+    rgba(4, 0, 4, 1) 90%
+  );
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: monospace; /* Usa una fuente de tipo monoespaciado para el código */
+  white-space: pre-wrap; /* Mantiene los saltos de línea y los espacios en blanco */
+  word-wrap: break-word; /* Ajusta el texto dentro del contenedor sin scroll */
+  box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho y alto */
+  display: flex; /* Usa flexbox para manejar el contenido interno */
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+pre {
+  margin: 0; /* Elimina el margen predeterminado de <pre> */
+  white-space: pre-wrap; /* Asegura que los saltos de línea y espacios se mantengan */
+  width: 100%; /* Asegura que <pre> ocupe todo el ancho del contenedor */
+}
+
+code {
+  margin: 50px;
+  display: block; /* Asegúrate de que <code> ocupe todo el espacio de <pre> */
+}
