@@ -55,11 +55,11 @@
 }
 
 .text-celeste {
-  color: #00bfff;
+  color: #16f2a6;
 }
 
 .text-rosa {
-  color: #a004a5;
+  color: #ec4899;
 }
 
 .botones {
@@ -72,7 +72,7 @@
   padding: 10px;
   border: none;
   border-radius: 50%;
-  color: #fff;
+  color: #ec4899;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -85,7 +85,7 @@
 
 .boton:hover {
   transform: scale(1.1);
-  background-color: #1671d3;
+  background-color: #45967969;
 }
 
 .boton svg {
