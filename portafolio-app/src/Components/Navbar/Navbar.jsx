@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <a href="/home" className="navbar-brand">
+        <a href="/" className="navbar-brand">
           Julian
         </a>
         <button
