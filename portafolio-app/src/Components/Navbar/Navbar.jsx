@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Importa Link de react-router-dom
 import "./Navbar.css"; // Asegúrate de que este archivo CSS esté correctamente importado
-
+import About from "../Routes/About";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,9 +25,9 @@ const Navbar = () => {
         <div className={`navbar-menu ${isOpen ? "active" : ""}`}>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a href="#" className="nav-link">
+              <Link to="/about" className="nav-link">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a href="#" className="nav-link">
