@@ -109,6 +109,13 @@
     justify-content: center;
     align-items: center;
   }
+  .Texto p {
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
+  .contenedorTexto {
+    font-size: 0.6rem;
+  }
   .CodeDescripcion {
     width: 100%;
     height: auto;

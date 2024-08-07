@@ -28,4 +28,5 @@ code {
   overflow-wrap: break-word; /* Ajusta el texto largo dentro del contenedor */
   white-space: pre-wrap; /* Mantiene los saltos de línea y los espacios en blanco */
   background: transparent; /* Asegúrate de que el fondo del código sea transparente */
+  flex-wrap: wrap;
 }
