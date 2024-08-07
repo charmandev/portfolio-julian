@@ -52,10 +52,7 @@ function App() {
           </div>
         </div>
         <div className="CodeDescripcion">
-          <div className="contenedorTexto">
-            {" "}
-            <CodeDisplay />
-          </div>
+          <CodeDisplay />
         </div>
       </div>
     </div>

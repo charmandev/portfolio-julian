@@ -13,6 +13,7 @@ body {
   width: 100%;
   box-sizing: border-box; /* Incluye padding en el ancho total */
   position: relative; /* Asegura que el posicionamiento absoluto dentro del navbar funcione */
+  background-color: #33333370; /* Fondo para el navbar */
 }
 
 .container {
@@ -23,27 +24,35 @@ body {
 }
 
 .navbar-brand {
-  color: #16f2b3;
+  color: #ff6c6b;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 2rem;
   margin-left: 50px;
+  font-style: italic;
 }
 
 /* Botón toggler */
 .navbar-toggler {
-  background: none;
-  border: none;
-  color: #fff;
+  background-color: transparent; /* Fondo del botón de toggle */
+  border: none; /* Elimina el borde del botón */
   font-size: 1.5rem;
   cursor: pointer; /* Asegura que el botón sea clickeable */
   position: absolute; /* Posiciona el botón de forma absoluta */
   right: 50px; /* Ajusta la distancia desde el borde derecho */
   display: none; /* Oculta el botón por defecto */
-  transition: transform 0.3s, background-color 0.3s; /* Añade transición para el fondo y la transformación */
+  transition: background-color 0.3s, transform 0.3s; /* Añade transición para el fondo y la transformación */
+  padding: 0.5rem; /* Espacio interno */
+  border-radius: 4px; /* Bordes redondeados */
 }
 
+/* Cambios al pasar el ratón por encima del botón */
+.navbar-toggler:hover {
+  background-color: #555; /* Cambia el fondo al pasar el ratón */
+}
+
+/* Icono del botón toggler */
 .navbar-toggler-icon {
   width: 25px;
   height: 2px;
@@ -124,6 +133,7 @@ body {
     width: 100%;
     flex-direction: column;
     display: none;
+    background-color: #333; /* Fondo para el menú desplegable en pantallas pequeñas */
   }
 
   .navbar-menu.active {
@@ -141,4 +151,9 @@ body {
   .navbar-toggler {
     display: block; /* Muestra el botón en pantallas móviles */
   }
+}
+
+/* Asegúrate de ocultar el botón de toggler en el menú desplegable si no es necesario */
+.navbar-menu.active .navbar-toggler {
+  display: none;
 }

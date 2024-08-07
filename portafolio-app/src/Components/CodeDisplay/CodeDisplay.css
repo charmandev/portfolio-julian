@@ -1,32 +1,67 @@
-/* Estilos específicos para el contenedor del código */
-.contenedorCodigo {
-  flex: 1; /* Permite que el contenedor use todo el espacio disponible */
-  margin: 50px auto; /* Centra el contenedor horizontalmente y agrega margen */
-  max-width: 800px; /* Establece un ancho máximo para el contenedor */
-  background: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(100, 43, 115, 1) 0%,
-    rgba(4, 0, 4, 1) 90%
-  ); /* Fondo degradado atractivo */
-  color: white; /* Color del texto del código */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 12px; /* Bordes redondeados para el contenedor */
-  border: 1px solid #444; /* Añade un borde sutil para resaltar el contenedor */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil para el contenedor */
-  font-family: "Fira Code", monospace; /* Usa una fuente monoespaciada para el código */
-  overflow: hidden; /* Elimina el scroll horizontal */
-  box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho y alto */
+.code-container {
+  width: 100%;
+  height: auto;
+  background-color: #2e2e2e;
+  color: #f8f8f2;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
 }
 
-pre {
-  margin: 0; /* Elimina el margen predeterminado de <pre> */
-  overflow: auto; /* Permite scroll vertical si el contenido es muy alto */
+.code-header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 8px;
+  background-color: #333;
 }
 
-code {
-  display: block; /* Asegúrate de que <code> ocupe todo el espacio de <pre> */
-  overflow-wrap: break-word; /* Ajusta el texto largo dentro del contenedor */
-  white-space: pre-wrap; /* Mantiene los saltos de línea y los espacios en blanco */
-  background: transparent; /* Asegúrate de que el fondo del código sea transparente */
-  flex-wrap: wrap;
+.circle {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.red {
+  background-color: #ff6c6b;
+}
+.yellow {
+  background-color: #f5be42;
+}
+.green {
+  background-color: #66d9ef;
+}
+
+.code-block {
+  padding: 16px;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+
+.keyword {
+  color: #f92672;
+}
+.variable {
+  color: #a6e22e;
+}
+.operator {
+  color: #f8f8f2;
+}
+.string {
+  color: #e6db74;
+}
+.property {
+  color: #66d9ef;
+}
+.boolean {
+  color: #f92672;
+}
+.number {
+  color: #ae81ff;
+}
+.bracket {
+  color: #f8f8f2;
 }
