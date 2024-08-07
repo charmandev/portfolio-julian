@@ -13,7 +13,6 @@ body {
   width: 100%;
   box-sizing: border-box; /* Incluye padding en el ancho total */
   position: relative; /* Asegura que el posicionamiento absoluto dentro del navbar funcione */
-  background-color: #33333370; /* Fondo para el navbar */
 }
 
 .container {
