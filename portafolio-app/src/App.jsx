@@ -95,7 +95,6 @@ const Home = () => (
       </div>
     </div>
     <div className="Info">
-      {" "}
       <ProfileSection />
     </div>
   </div>
