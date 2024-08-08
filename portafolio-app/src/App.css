@@ -116,7 +116,6 @@
 .Info {
   width: 100%;
   height: 100vh;
-  background-color: red;
 }
 @media (max-width: 1200px) {
   /* Estilos para pantallas de hasta 1200px */

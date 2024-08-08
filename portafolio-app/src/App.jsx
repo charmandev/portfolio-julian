@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import CodeDisplay from "./Components/CodeDisplay/CodeDisplay";
+import ProfileSection from "./Components/ProfileSection/ProfileSection";
 import About from "./Components/Routes/About";
 import {
   FaGithub,
@@ -93,7 +94,10 @@ const Home = () => (
         <CodeDisplay />
       </div>
     </div>
-    <div className="Info"></div>
+    <div className="Info">
+      {" "}
+      <ProfileSection />
+    </div>
   </div>
 );
 
