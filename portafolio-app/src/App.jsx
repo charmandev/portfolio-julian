@@ -3,7 +3,15 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import CodeDisplay from "./Components/CodeDisplay/CodeDisplay";
 import About from "./Components/Routes/About";
-import { FaGithub, FaLinkedin, FaFacebook, FaWhatsapp } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaWhatsapp,
+  FaUserFriends,
+  FaDownload,
+} from "react-icons/fa";
+import Button from "./Components/Button/Button";
 import "./App.css";
 
 function App() {
@@ -24,10 +32,8 @@ function App() {
 
 const Home = () => (
   <div>
-    <div className="background-container"></div>{" "}
-    {/* Contenedor del fondo SVG */}
+    <div className="background-container"></div>
     <div className="contenido">
-      {" "}
       <div className="Texto">
         <p>
           Hola, <br /> <span className="text-celeste">Soy Julian.</span> <br />
@@ -67,6 +73,20 @@ const Home = () => (
           >
             <FaWhatsapp />
           </a>
+        </div>
+        <div className="custom-buttons">
+          <Button
+            text="CONTACT ME"
+            icon={<FaUserFriends />}
+            borderColor="rgba(255, 0, 150, 0.6)"
+            onClick={() => alert("Contact Me clicked!")}
+          />
+          <Button
+            text="GET RESUME"
+            icon={<FaDownload />}
+            borderColor="rgba(255, 94, 0, 0.6)"
+            onClick={() => alert("Get Resume clicked!")}
+          />
         </div>
       </div>
       <div className="CodeDescripcion">

@@ -107,6 +107,10 @@
   font-size: 0.8rem;
 }
 
+.custom-buttons {
+  display: flex;
+  gap: 10px;
+}
 @media (max-width: 1200px) {
   /* Estilos para pantallas de hasta 1200px */
 }
@@ -124,6 +128,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
   }
   .Texto p {
     font-size: 1.5rem;
@@ -142,9 +147,9 @@
   }
   .contenido {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     flex: 1;
-    margin-top: 100px;
+    margin-top: 20px;
   }
 }
 

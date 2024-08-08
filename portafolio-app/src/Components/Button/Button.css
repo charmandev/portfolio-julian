@@ -1,0 +1,19 @@
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+  opacity: 0.8;
+}
+
+.button-icon {
+  margin-right: 8px;
+}
