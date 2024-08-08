@@ -40,16 +40,17 @@
 }
 @media (max-width: 768px) {
   .contenedor {
+    width: 100%;
     flex-direction: column-reverse;
   }
 
   .text-container {
     width: 100%;
-    text-align: center;
+    text-align: start;
     margin-top: 20px;
   }
   .description {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .image-container {
