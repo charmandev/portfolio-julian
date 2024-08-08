@@ -5,6 +5,7 @@
   margin: 0;
   font-family: Arial, sans-serif;
   position: relative; /* Necesario para el posicionamiento absoluto del fondo */
+  align-items: center;
 }
 
 .background-container {
@@ -34,7 +35,7 @@
 .contenido {
   display: flex;
   flex: 1;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .Texto {
@@ -110,6 +111,12 @@
 .custom-buttons {
   display: flex;
   gap: 10px;
+}
+
+.Info {
+  width: 100%;
+  height: 100vh;
+  background-color: red;
 }
 @media (max-width: 1200px) {
   /* Estilos para pantallas de hasta 1200px */

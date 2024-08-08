@@ -93,6 +93,7 @@ const Home = () => (
         <CodeDisplay />
       </div>
     </div>
+    <div className="Info"></div>
   </div>
 );
 
