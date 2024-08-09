@@ -3,12 +3,30 @@
   border: 1px solid #261d7594;
   color: #3a089c;
   border-radius: 8px;
-  width: 500px;
+  width: 500px; /* Ancho predeterminado para pantallas grandes */
   padding: 30px 10px 20px 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background: linear-gradient(45deg, #0f1428, #1d0352);
   margin: 20px;
   overflow: hidden;
+  transition: width 0.3s ease; /* Suaviza el cambio de tamaño */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .card {
+    width: 90%; /* Ajusta el ancho al 90% del contenedor padre */
+    max-width: 400px; /* Limita el ancho máximo para pantallas pequeñas */
+    padding: 20px; /* Ajusta el relleno para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
+    max-width: 300px; /* Limita el ancho máximo para pantallas muy pequeñas */
+    padding: 15px; /* Ajusta el relleno para pantallas muy pequeñas */
+  }
 }
 
 .card::before {
