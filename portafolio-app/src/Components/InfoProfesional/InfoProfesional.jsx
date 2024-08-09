@@ -7,7 +7,9 @@ import compuImage from "../../assets/compu.png";
 const InfoProfesional = () => {
   return (
     <div className="ContenedorGeneralInfo">
-      <h3>Experiencias</h3>
+      <div className="titleContainer">
+        <h3>Experiencias</h3>
+      </div>{" "}
       <div className="infoProfesionalContenedor">
         <div className="compImageWrapper">
           <img src={compuImage} alt="Computadora" className="compuImage" />

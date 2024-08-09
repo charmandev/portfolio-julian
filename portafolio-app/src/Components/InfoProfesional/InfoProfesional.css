@@ -9,6 +9,11 @@
   position: relative; /* Asegura que z-index tenga efecto */
   padding: 20px; /* Opcional: agrega algo de espacio alrededor del contenido */
 }
+.titleContainer h3 {
+  color: #fff; /* Color del texto del título */
+  margin: 0; /* Elimina el margen predeterminado */
+  font-size: 24px; /* Tamaño de la fuente del título */
+}
 
 .compuImage {
   width: 300px; /* Ajusta según tus necesidades */
