@@ -1,23 +1,57 @@
 .card {
-  border: 1px solid #ddd;
-  color: black;
+  position: relative;
+  border: 1px solid #261d7594;
+  color: #3a089c;
   border-radius: 8px;
   width: 400px;
   padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background: linear-gradient(45deg, #0f1428, #1d0352);
   margin: 20px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  pointer-events: none;
+  transition: background 0.3s ease;
+  z-index: 1;
+  background: radial-gradient(
+    circle at var(--x) var(--y),
+    rgba(255, 105, 180, 0.4),
+    rgba(255, 105, 180, 0) 50%
+  );
+  mix-blend-mode: multiply;
+}
+
+.card:hover::before {
+  background: radial-gradient(
+    circle at var(--x) var(--y),
+    rgba(255, 105, 180, 0.6),
+    rgba(255, 105, 180, 0) 60%
+  );
 }
 
 .card-header {
   text-align: center;
   margin-bottom: 16px;
+  color: #16f2a6;
+  position: relative;
+  z-index: 2;
 }
 
 .card-body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .icon-container {
@@ -35,13 +69,13 @@
 .text-containerCard {
   display: flex;
   flex-direction: column;
-  color: black;
+  color: white;
 }
 
 .top-text {
   font-size: 14px;
   margin: 0;
-  color: black;
+  color: white;
 }
 
 .bottom-text {

@@ -1,33 +1,36 @@
 import React from "react";
-import "./InfoProfesional.css"; // Asegúrate de que este archivo CSS exista
+import "./InfoProfesional.css";
 import Card from "../Card/Card";
 import { FaLaptop } from "react-icons/fa";
+import compuImage from "../../assets/compu.png";
+
 const InfoProfesional = () => {
   return (
     <div className="ContenedorGeneralInfo">
       <h3>Experiencias</h3>
       <div className="infoProfesionalContenedor">
-        <img src="https://via.placeholder.com/250" alt="" />
+        <div className="compImageWrapper">
+          <img src={compuImage} alt="Computadora" className="compuImage" />
+        </div>
         <div className="CardContenedor">
-          {" "}
           <Card
             title="Card Title"
-            icon={FaLaptop} // Pasa el ícono como componente
+            icon={FaLaptop}
             topText="Top Text"
             bottomText="Bottom Text"
-          />{" "}
+          />
           <Card
             title="Card Title"
-            icon={FaLaptop} // Pasa el ícono como componente
+            icon={FaLaptop}
             topText="Top Text"
             bottomText="Bottom Text"
-          />{" "}
+          />
           <Card
             title="Card Title"
-            icon={FaLaptop} // Pasa el ícono como componente
+            icon={FaLaptop}
             topText="Top Text"
             bottomText="Bottom Text"
-          />{" "}
+          />
         </div>
       </div>
     </div>
