@@ -4,6 +4,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import CodeDisplay from "./Components/CodeDisplay/CodeDisplay";
 import ProfileSection from "./Components/ProfileSection/ProfileSection";
 import About from "./Components/Routes/About";
+import Card from "./Components/Card/Card";
+import InfoProfesional from "./Components/InfoProfesional/InfoProfesional";
 import {
   FaGithub,
   FaLinkedin,
@@ -11,6 +13,7 @@ import {
   FaWhatsapp,
   FaUserFriends,
   FaDownload,
+  FaLaptop,
 } from "react-icons/fa";
 import Button from "./Components/Button/Button";
 import "./App.css";
@@ -97,6 +100,7 @@ const Home = () => (
     <div className="Info">
       <ProfileSection />
     </div>
+    <InfoProfesional />{" "}
   </div>
 );
 

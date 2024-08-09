@@ -1,0 +1,29 @@
+.ContenedorGeneralInfo {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.infoProfesionalContenedor {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+}
+.CardContenedor {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .infoProfesionalContenedor {
+    width: 100%;
+    height: auto;
+    display: block;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+  }
+}
