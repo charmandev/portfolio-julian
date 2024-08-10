@@ -1,32 +1,15 @@
 .card {
   position: relative;
-  border: 1px solid #261d7594;
+  border: 1px solid #8606a094;
   color: #3a089c;
   border-radius: 8px;
-  width: 500px; /* Ancho predeterminado para pantallas grandes */
+  width: 500px;
   padding: 30px 10px 20px 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background: linear-gradient(45deg, #0f1428, #1d0352);
   margin: 20px;
   overflow: hidden;
-  transition: width 0.3s ease; /* Suaviza el cambio de tamaño */
-}
-
-/* Media query para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .card {
-    width: 90%; /* Ajusta el ancho al 90% del contenedor padre */
-    max-width: 400px; /* Limita el ancho máximo para pantallas pequeñas */
-    padding: 20px; /* Ajusta el relleno para pantallas pequeñas */
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
-    max-width: 300px; /* Limita el ancho máximo para pantallas muy pequeñas */
-    padding: 15px; /* Ajusta el relleno para pantallas muy pequeñas */
-  }
+  transition: transform 0.3s ease, background 0.3s ease; /* Añadido para suavizar el efecto */
 }
 
 .card::before {
@@ -38,22 +21,25 @@
   height: 100%;
   border-radius: 8px;
   pointer-events: none;
-  transition: background 0.3s ease;
   z-index: 1;
   background: radial-gradient(
     circle at var(--x) var(--y),
     rgba(255, 105, 180, 0.4),
     rgba(255, 105, 180, 0) 50%
   );
-  mix-blend-mode: multiply;
+  mix-blend-mode: screen; /* Cambiado para un mejor efecto de iluminación */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Añadido para transiciones suaves */
+  opacity: 0; /* Inicialmente invisible */
 }
 
 .card:hover::before {
+  opacity: 1; /* Se vuelve visible al pasar el mouse */
   background: radial-gradient(
     circle at var(--x) var(--y),
-    rgba(255, 105, 180, 0.6),
+    rgba(114, 3, 59, 0.329),
     rgba(255, 105, 180, 0) 60%
   );
+  transform: scale(1.05); /* Efecto de escala leve al pasar el mouse */
 }
 
 .card-header {
