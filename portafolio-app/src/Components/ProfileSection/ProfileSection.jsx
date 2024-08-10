@@ -19,7 +19,11 @@ const ProfileSection = () => {
         </p>
       </div>
       <div className="image-container">
-        <img src={perfilJulian} alt="Perfil de Julian" />
+        <img
+          src={perfilJulian}
+          alt="Perfil de Julian"
+          className="profile-image"
+        />
       </div>
     </div>
   );

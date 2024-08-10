@@ -31,13 +31,23 @@
 .image-container {
   width: 30%;
   flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.image-container img {
+.profile-image {
   width: 80%;
   height: auto;
   margin: 20px;
   border-radius: 8px;
+  filter: grayscale(100%); /* Blanco y negro por defecto */
+  transition: filter 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.profile-image:hover {
+  filter: grayscale(0%); /* Quitar el efecto blanco y negro */
+  transform: scale(1.05); /* Aumentar ligeramente el tamaño */
 }
 
 @media (max-width: 768px) {
@@ -51,21 +61,16 @@
     text-align: start;
     margin-top: 20px;
   }
+
   .description {
     font-size: 14px;
   }
 
   .image-container {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
-  .image-container img {
+  .profile-image {
     width: 60%;
-    height: auto;
-    margin: 20px;
-    border-radius: 8px;
   }
 }
