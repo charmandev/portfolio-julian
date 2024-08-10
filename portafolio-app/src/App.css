@@ -118,6 +118,30 @@
   width: 100%;
   height: auto;
 }
+
+.slideContenedor {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.slideContenedor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 2px; /* Grosor del borde */
+  background: linear-gradient(
+    to right,
+    transparent 10%,
+    /* Degradado desde el borde izquierdo */ #06df0694 50%,
+    /* Color intenso en el centro */ transparent 90%
+      /* Degradado hacia el borde derecho */
+  );
+  transform: translateX(-50%); /* Centra el borde */
+}
+
 @media (max-width: 1200px) {
   /* Estilos para pantallas de hasta 1200px */
 }

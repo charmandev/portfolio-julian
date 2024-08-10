@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import CodeDisplay from "./Components/CodeDisplay/CodeDisplay";
 import ProfileSection from "./Components/ProfileSection/ProfileSection";
 import About from "./Components/Routes/About";
-import Card from "./Components/Card/Card";
+import Slide from "./Components/Slide/Slide";
 import InfoProfesional from "./Components/InfoProfesional/InfoProfesional";
 import {
   FaGithub,
@@ -100,7 +100,10 @@ const Home = () => (
     <div className="Info">
       <ProfileSection />
     </div>
-    <InfoProfesional />{" "}
+    <InfoProfesional />
+    <div className="slideContenedor">
+      <Slide />
+    </div>
   </div>
 );
 

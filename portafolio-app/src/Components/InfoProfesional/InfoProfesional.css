@@ -8,10 +8,39 @@
   z-index: 1; /* Asegura que el contenedor esté por encima del fondo */
   position: relative; /* Asegura que z-index tenga efecto */
 }
+.titleContainer {
+  position: relative; /* Necesario para posicionar los pseudo-elementos */
+  display: inline-block; /* Ajusta el contenedor al tamaño del texto */
+  margin-top: 20px;
+}
+
 .titleContainer h3 {
   color: #fff; /* Color del texto del título */
   margin: 0; /* Elimina el margen predeterminado */
   font-size: 24px; /* Tamaño de la fuente del título */
+  background-color: #895bf55d; /* Fondo semitransparente negro */
+  padding: 10px; /* Espaciado interno alrededor del texto */
+  border-radius: 5px; /* Bordes redondeados opcionales */
+  display: inline-block; /* Ajusta el fondo al tamaño del texto */
+}
+
+.titleContainer::before,
+.titleContainer::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%); /* Ajusta la posición verticalmente */
+  width: 50px; /* Ancho de la línea (ajusta a tu preferencia) */
+  height: 1px; /* Altura de la línea */
+  background-color: #1eccd8; /* Color de la línea */
+}
+
+.titleContainer::before {
+  left: -60px; /* Posiciona la línea a la izquierda del contenedor */
+}
+
+.titleContainer::after {
+  right: -60px; /* Posiciona la línea a la derecha del contenedor */
 }
 
 .compuImage {

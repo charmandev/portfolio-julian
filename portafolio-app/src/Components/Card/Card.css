@@ -1,15 +1,32 @@
 .card {
   position: relative;
-  border: 1px solid #8606a094;
+  border: 1px solid #5e50df94;
   color: #3a089c;
   border-radius: 8px;
-  width: 500px;
+  width: 500px; /* Ancho predeterminado para pantallas grandes */
   padding: 30px 10px 20px 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(45deg, #0f1428, #1d0352);
+  background: linear-gradient(45deg, #0f1428, #35098d);
   margin: 20px;
   overflow: hidden;
-  transition: transform 0.3s ease, background 0.3s ease; /* Añadido para suavizar el efecto */
+  transition: width 0.3s ease; /* Suaviza el cambio de tamaño */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .card {
+    width: 90%; /* Ajusta el ancho al 90% del contenedor padre */
+    max-width: 400px; /* Limita el ancho máximo para pantallas pequeñas */
+    padding: 20px; /* Ajusta el relleno para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
+    max-width: 300px; /* Limita el ancho máximo para pantallas muy pequeñas */
+    padding: 15px; /* Ajusta el relleno para pantallas muy pequeñas */
+  }
 }
 
 .card::before {
@@ -21,25 +38,22 @@
   height: 100%;
   border-radius: 8px;
   pointer-events: none;
+  transition: background 0.3s ease;
   z-index: 1;
   background: radial-gradient(
     circle at var(--x) var(--y),
     rgba(255, 105, 180, 0.4),
     rgba(255, 105, 180, 0) 50%
   );
-  mix-blend-mode: screen; /* Cambiado para un mejor efecto de iluminación */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Añadido para transiciones suaves */
-  opacity: 0; /* Inicialmente invisible */
+  mix-blend-mode: multiply;
 }
 
 .card:hover::before {
-  opacity: 1; /* Se vuelve visible al pasar el mouse */
   background: radial-gradient(
     circle at var(--x) var(--y),
-    rgba(114, 3, 59, 0.329),
+    rgba(255, 105, 180, 0.6),
     rgba(255, 105, 180, 0) 60%
   );
-  transform: scale(1.05); /* Efecto de escala leve al pasar el mouse */
 }
 
 .card-header {
@@ -65,8 +79,9 @@
 }
 
 .card-icon {
-  width: 40px;
-  height: 40px;
+  color: #8a5bf5; /* Cambia '#ff69b4' por el color deseado */
+  width: 60px;
+  height: 60px;
   margin-right: 8px;
 }
 
@@ -78,7 +93,7 @@
 
 .top-text {
   font-size: 14px;
-  margin: 0;
+  margin: 0 0 2px 10px;
   color: white;
 }
 
