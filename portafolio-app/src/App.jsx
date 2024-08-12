@@ -104,8 +104,13 @@ const Home = () => (
     <div className="infoProfesional">
       <InfoProfesional />
     </div>
-    <div className="slideContenedor"></div>
-    <ScrollableCodeDisplay />
+    <div className="slideContenedor">
+      <Slide />
+    </div>
+    <div className="scrollContainer">
+      {" "}
+      <ScrollableCodeDisplay />
+    </div>
   </div>
 );
 

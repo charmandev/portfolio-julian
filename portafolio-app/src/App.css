@@ -141,6 +141,10 @@
   transform: translateX(-50%); /* Centra el borde */
 }
 
+.scrollContainer {
+  width: 100%;
+  height: auto;
+}
 @media (max-width: 1200px) {
   /* Estilos para pantallas de hasta 1200px */
 }
