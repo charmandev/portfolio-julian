@@ -1,16 +1,33 @@
 import React, { useState, useEffect, useRef } from "react";
 import CodeDisplay from "../CodeDisplay/CodeDisplay";
-import "./ScrollableCodeDisplay.css"; // Sigue usando el archivo CSS actual
+import "./ScrollableCodeDisplay.css";
+
+const AccordionItem = ({ index, title, isActive, onClick, ref }) => {
+  return (
+    <div className="accordion-item" ref={ref}>
+      <div className="accordion-title" onClick={() => onClick(index)}>
+        {title}
+      </div>
+      <div className={`accordion-content ${isActive ? "active" : ""}`}>
+        <CodeDisplay />
+      </div>
+    </div>
+  );
+};
 
 const ScrollableCodeDisplay = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const accordionRefs = useRef([]);
 
+  const handleClick = (index) => {
+    setActiveIndex(index === activeIndex ? null : index); // Toggling logic
+  };
+
   useEffect(() => {
     const options = {
-      root: null, // Intersecta con el viewport
+      root: null,
       rootMargin: "0px",
-      threshold: 0.1, // Cuánto del elemento debe estar visible
+      threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -18,9 +35,9 @@ const ScrollableCodeDisplay = () => {
         const index = accordionRefs.current.indexOf(entry.target);
 
         if (entry.isIntersecting) {
-          setActiveIndex(index); // Activa el acordeón actual
+          setActiveIndex(index);
         } else if (activeIndex === index) {
-          setActiveIndex(null); // Desactiva el acordeón si sale del viewport
+          setActiveIndex(null);
         }
       });
     }, options);
@@ -33,40 +50,21 @@ const ScrollableCodeDisplay = () => {
   }, [activeIndex]);
 
   return (
-    <div className="accordion-container">
-      <div
-        className="accordion-item"
-        ref={(el) => (accordionRefs.current[0] = el)}
-      >
-        <div className="accordion-title">Código 1</div>
-        <div
-          className={`accordion-content ${activeIndex === 0 ? "active" : ""}`}
-        >
-          <CodeDisplay />
-        </div>
+    <div className="accordion-wrapper">
+      <div className="title-wrapper">
+        <h3 className="projects-title">Proyectos</h3>
+        <div className="line"></div>
       </div>
-      <div
-        className="accordion-item"
-        ref={(el) => (accordionRefs.current[1] = el)}
-      >
-        <div className="accordion-title">Código 2</div>
-        <div
-          className={`accordion-content ${activeIndex === 1 ? "active" : ""}`}
-        >
-          <CodeDisplay />
-        </div>
-      </div>
-      <div
-        className="accordion-item"
-        ref={(el) => (accordionRefs.current[2] = el)}
-      >
-        <div className="accordion-title">Código 3</div>
-        <div
-          className={`accordion-content ${activeIndex === 2 ? "active" : ""}`}
-        >
-          <CodeDisplay />
-        </div>
-      </div>
+      {[0, 1, 2].map((index) => (
+        <AccordionItem
+          key={index}
+          index={index}
+          title={`Código ${index + 1}`}
+          isActive={activeIndex === index}
+          onClick={handleClick}
+          ref={(el) => (accordionRefs.current[index] = el)}
+        />
+      ))}
     </div>
   );
 };

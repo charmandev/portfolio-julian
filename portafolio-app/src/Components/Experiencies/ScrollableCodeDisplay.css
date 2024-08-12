@@ -1,13 +1,32 @@
 /* ScrollableCodeDisplay.css */
-.accordion-container {
-  width: 50%;
-  height: auto;
-  max-width: 800px; /* Ancho máximo para pantallas grandes */
+.accordion-wrapper {
+  width: 100%;
   margin: 0 auto; /* Centrar horizontalmente */
   padding: 20px; /* Espaciado interno */
   box-sizing: border-box;
-  background-color: #27023f71; /* Fondo del contenedor */
-  border-radius: 10px; /* Bordes redondeados */
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.projects-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff; /* Color del texto del título */
+  margin: 0; /* Elimina el margen predeterminado */
+  margin-right: 20px; /* Espacio entre el título y la línea */
+  background-color: #3c2e72;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.line {
+  flex-grow: 1; /* Hace que la línea ocupe el espacio restante */
+  height: 2px; /* Grosor de la línea */
+  background-color: #42057c5d; /* Color de la línea */
 }
 
 .accordion-item {
@@ -15,6 +34,7 @@
   border-radius: 5px; /* Bordes redondeados en cada ítem */
   margin-top: 10px;
   overflow: hidden;
+  background-color: #27023f71; /* Fondo del contenedor */
 }
 
 .accordion-title {
@@ -52,13 +72,13 @@
 
 /* Estilos adaptativos */
 @media (max-width: 768px) {
-  .accordion-container {
+  .accordion-wrapper {
     width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
   }
 }
 
 @media (max-width: 480px) {
-  .accordion-container {
+  .accordion-wrapper {
     width: 95%; /* Ajusta el ancho para pantallas muy pequeñas */
   }
 }
