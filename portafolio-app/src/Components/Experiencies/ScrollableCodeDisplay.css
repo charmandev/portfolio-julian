@@ -1,6 +1,7 @@
 /* ScrollableCodeDisplay.css */
 .accordion-container {
   width: 50%;
+  height: 700px;
   max-width: 800px; /* Ancho máximo para pantallas grandes */
   margin: 0 auto; /* Centrar horizontalmente */
   padding: 20px; /* Espaciado interno */
