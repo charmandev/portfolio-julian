@@ -177,9 +177,10 @@
   }
   .contenido {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     flex: 1;
     margin-top: 20px;
+    gap: 50px;
   }
 }
 

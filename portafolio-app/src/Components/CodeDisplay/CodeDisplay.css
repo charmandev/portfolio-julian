@@ -1,5 +1,5 @@
 .code-container {
-  width: 80%;
+  width: 500px;
   height: auto;
   background-color: #0b0e32;
   color: #f8f8f2;
@@ -7,6 +7,45 @@
   overflow: hidden;
   font-family: "Courier New", Courier, monospace;
   position: relative;
+}
+
+@media (max-width: 1200px) {
+  .code-container {
+    width: 500px;
+    height: auto;
+    background-color: #0b0e32;
+    color: #f8f8f2;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Courier New", Courier, monospace;
+    position: relative;
+  }
+}
+
+/* Estilos para pantallas de hasta 992px */
+@media (max-width: 992px) {
+  .code-container {
+    width: 450px;
+    height: auto;
+    background-color: #0b0e32;
+    color: #f8f8f2;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Courier New", Courier, monospace;
+    position: relative;
+  }
+}
+@media (max-width: 768px) {
+  .code-container {
+    width: 300px;
+    height: auto;
+    background-color: #0b0e32;
+    color: #f8f8f2;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Courier New", Courier, monospace;
+    position: relative;
+  }
 }
 
 .code-header {

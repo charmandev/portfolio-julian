@@ -1,0 +1,120 @@
+.scrollable-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  margin-bottom: 700px;
+}
+
+.title-projects {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  position: relative;
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding-left: 10px; /* Agrega un poco de espacio a la izquierda */
+}
+
+.title-projects h3 {
+  color: white;
+  margin: 0; /* Elimina márgenes innecesarios */
+  padding: 0;
+  font-size: 1.5rem; /* Tamaño de fuente predeterminado */
+  font-weight: bold;
+  position: relative;
+}
+
+.title-projects::after {
+  content: "";
+  display: block;
+  width: 50%; /* Ajusta el ancho de la línea decorativa */
+  height: 4px;
+  background: #9e8989; /* Color de la línea */
+  position: absolute;
+  bottom: -10px; /* Ajusta la distancia desde el texto */
+  left: 50%; /* Comienza desde el medio del contenedor */
+  transform: translateX(-50%); /* Centra la línea respecto al contenedor */
+}
+
+@media (max-width: 768px) {
+  .title-projects {
+    width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+  }
+
+  .title-projects h3 {
+    font-size: 1.2rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+  }
+
+  .title-projects::after {
+    width: 60%; /* Ajusta el ancho de la línea decorativa */
+  }
+}
+
+@media (max-width: 480px) {
+  .title-projects {
+    width: 95%; /* Ajusta el ancho al 95% para pantallas muy pequeñas */
+  }
+
+  .title-projects h3 {
+    font-size: 1rem; /* Reduce aún más el tamaño de la fuente para pantallas pequeñas */
+  }
+
+  .title-projects::after {
+    width: 70%; /* Ajusta el ancho de la línea decorativa */
+    bottom: -5px; /* Ajusta la distancia desde el texto */
+  }
+}
+
+.scrollable-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 50px;
+}
+
+.code-display-container {
+  background-color: #5e59592c;
+
+  width: 80%; /* Ajusta el ancho para que se ajuste al contenedor */
+  max-width: 1200px; /* Limita el ancho máximo para pantallas grandes */
+  height: 400px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.code-display-container::-webkit-scrollbar {
+  height: 6px; /* Ajusta el grosor del scrollbar */
+}
+
+.code-display-container::-webkit-scrollbar-track {
+  background: #2b2b2b; /* Fondo del track del scrollbar */
+  border-radius: 10px;
+}
+
+.code-display-container::-webkit-scrollbar-thumb {
+  background: #0c434e; /* Color del thumb del scrollbar */
+  border-radius: 10px;
+  border: 2px solid #0b0e32; /* Borde del thumb del scrollbar */
+}
+
+.code-display-container::-webkit-scrollbar-thumb:hover {
+  background: #60738a; /* Color del thumb cuando se pasa el mouse */
+}
+
+.code-display-container {
+  scrollbar-width: thin; /* Para navegadores que soportan scrollbar-width */
+  scrollbar-color: #0c434e #2b2b2b; /* Color del thumb y track para Firefox */
+}
+
+.code-item {
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

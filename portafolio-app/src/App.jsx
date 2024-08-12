@@ -5,6 +5,7 @@ import CodeDisplay from "./Components/CodeDisplay/CodeDisplay";
 import ProfileSection from "./Components/ProfileSection/ProfileSection";
 import About from "./Components/Routes/About";
 import Slide from "./Components/Slide/Slide";
+import ScrollableCodeDisplay from "./Components/Experiencies/ScrollableCodeDisplay";
 import InfoProfesional from "./Components/InfoProfesional/InfoProfesional";
 import {
   FaGithub,
@@ -103,9 +104,8 @@ const Home = () => (
     <div className="infoProfesional">
       <InfoProfesional />
     </div>
-    <div className="slideContenedor">
-      <Slide />
-    </div>
+    <div className="slideContenedor"></div>
+    <ScrollableCodeDisplay />
   </div>
 );
 
