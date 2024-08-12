@@ -100,7 +100,9 @@ const Home = () => (
     <div className="Info">
       <ProfileSection />
     </div>
-    <InfoProfesional />
+    <div className="infoProfesional">
+      <InfoProfesional />
+    </div>
     <div className="slideContenedor">
       <Slide />
     </div>
