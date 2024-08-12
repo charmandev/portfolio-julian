@@ -7,7 +7,9 @@
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   z-index: 1; /* Asegura que el contenedor esté por encima del fondo */
   position: relative; /* Asegura que z-index tenga efecto */
+  padding: 20px; /* Agrega padding para evitar que el contenido toque los bordes en pantallas pequeñas */
 }
+
 .titleContainer {
   position: relative; /* Necesario para posicionar los pseudo-elementos */
   display: inline-block; /* Ajusta el contenedor al tamaño del texto */
@@ -92,6 +94,7 @@
   align-items: center;
   margin-top: 50px;
   text-align: center;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas en pantallas pequeñas */
 }
 
 .CardContenedor {
@@ -99,15 +102,78 @@
   justify-content: center;
   display: flex;
   align-items: center;
+  margin: 20px; /* Agrega margen entre las tarjetas para evitar que se amontonen */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .titleContainer h3 {
+    font-size: 22px; /* Reduce el tamaño del texto para pantallas medianas */
+    padding: 8px; /* Reduce el padding para mantener la proporción */
+  }
+
+  .titleContainer::before,
+  .titleContainer::after {
+    width: 40px; /* Reduce la longitud de las líneas decorativas */
+  }
+
+  .titleContainer::before {
+    left: -40px; /* Ajusta la posición de las líneas decorativas */
+  }
+
+  .titleContainer::after {
+    right: -40px;
+  }
+
+  .compuImage {
+    width: 250px; /* Reduce el tamaño de la imagen para pantallas medianas */
+  }
 }
 
 @media (max-width: 768px) {
-  .infoProfesionalContenedor {
-    width: 100%;
-    height: auto;
-    display: block;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 50px;
+  .titleContainer h3 {
+    font-size: 20px; /* Reduce aún más el tamaño del texto para pantallas pequeñas */
+    padding: 6px;
+  }
+
+  .titleContainer::before,
+  .titleContainer::after {
+    width: 30px; /* Reduce más la longitud de las líneas decorativas */
+  }
+
+  .titleContainer::before {
+    left: -30px;
+  }
+
+  .titleContainer::after {
+    right: -30px;
+  }
+
+  .compuImage {
+    width: 200px; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .titleContainer h3 {
+    font-size: 18px; /* Ajusta el tamaño del texto para pantallas muy pequeñas */
+    padding: 5px;
+  }
+
+  .titleContainer::before,
+  .titleContainer::after {
+    width: 20px; /* Ajusta más las líneas decorativas */
+  }
+
+  .titleContainer::before {
+    left: -20px;
+  }
+
+  .titleContainer::after {
+    right: -20px;
+  }
+
+  .compuImage {
+    width: 150px; /* Reduce más el tamaño de la imagen para móviles */
   }
 }

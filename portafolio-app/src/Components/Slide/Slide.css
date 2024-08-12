@@ -2,6 +2,7 @@
   text-align: center;
   width: 100%;
   height: auto; /* Cambia la altura a auto para adaptarse a diferentes tamaños de pantalla */
+  margin-bottom: 100px;
 }
 
 .slide-container h2 {
@@ -35,7 +36,7 @@
 }
 
 .icon-wrapper {
-  width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+  width: 80%; /* Ajusta el ancho para pantallas más pequeñas */
   height: auto;
   overflow: hidden;
   margin: 0 auto;
@@ -46,6 +47,15 @@
   justify-content: center;
   align-items: center;
   position: relative;
+
+  /* Aplica un gradiente de opacidad en los bordes */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
 }
 
 .icon-slider {
@@ -57,13 +67,14 @@
 }
 
 .icon {
-  font-size: 80px; /* Ajusta el tamaño del ícono para pantallas más pequeñas */
-  margin: 0 10px;
-  padding: 10px;
+  font-size: 7rem; /* Ajusta el tamaño del ícono para pantallas más pequeñas */
   color: black;
-  background-color: #11152c;
+  background-color: #6a7094;
   border-radius: 20px;
-  border: solid 1px #1eccd8;
+  padding: 10px;
+  margin-right: 10px;
+  border: solid 1px #4509a7;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Agrega una sombra */
 }
 
 .icon:hover {
@@ -81,6 +92,35 @@
 }
 
 /* Media Queries */
+@media (max-width: 1024px) {
+  .slide-container h2 {
+    font-size: 22px;
+    padding: 18px;
+  }
+
+  .slide-container h2::before,
+  .slide-container h2::after {
+    width: 40px;
+  }
+
+  .slide-container h2::before {
+    left: -40px;
+  }
+
+  .slide-container h2::after {
+    right: -40px;
+  }
+
+  .icon-wrapper {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .icon {
+    font-size: 5.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .slide-container h2 {
     font-size: 20px;
@@ -101,13 +141,12 @@
   }
 
   .icon-wrapper {
-    width: 95%;
+    width: 80%;
     padding: 10px;
   }
 
   .icon {
-    font-size: 60px;
-    margin: 0 8px;
+    font-size: 5rem;
   }
 }
 
@@ -131,12 +170,11 @@
   }
 
   .icon-wrapper {
-    width: 100%;
+    width: 80%;
     padding: 5px;
   }
 
   .icon {
-    font-size: 40px;
-    margin: 0 5px;
+    font-size: 4.5rem;
   }
 }
