@@ -1,14 +1,13 @@
 .slide-container {
   text-align: center;
   width: 100%;
-  height: auto; /* Cambia la altura a auto para adaptarse a diferentes tamaños de pantalla */
+  height: auto;
   margin-bottom: 100px;
 }
 
 .slide-container h2 {
   font-size: 24px;
   margin-top: 50px;
-  padding: 20px;
   color: #fff;
   background-color: #895bf55d;
   border-radius: 5px;
@@ -36,19 +35,16 @@
 }
 
 .icon-wrapper {
-  width: 80%; /* Ajusta el ancho para pantallas más pequeñas */
+  width: 80%;
   height: auto;
   overflow: hidden;
   margin: 0 auto;
-  padding: 20px;
   border-radius: 8px;
   display: flex;
   margin-top: 50px;
   justify-content: center;
   align-items: center;
   position: relative;
-
-  /* Aplica un gradiente de opacidad en los bordes */
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -64,22 +60,33 @@
   align-items: center;
   white-space: nowrap;
   animation: slide 10s linear infinite;
+  gap: 20px; /* Añade espacio entre los ítems */
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .icon {
-  font-size: 5rem; /* Ajusta el tamaño del ícono para pantallas más pequeñas */
-  margin: 0 10px;
-  padding: 10px;
+  font-size: 6rem; /* Aumenta el tamaño del ícono */
   color: black;
   background-color: #6a7094;
   border-radius: 20px;
   border: solid 1px #4509a7;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Agrega una sombra */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .icon:hover {
   transform: scale(1.2);
   transition: 0.6s;
+}
+
+.icon-description {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #fff;
 }
 
 @keyframes slide {
@@ -91,11 +98,9 @@
   }
 }
 
-/* Media Queries */
 @media (max-width: 1024px) {
   .slide-container h2 {
     font-size: 22px;
-    padding: 18px;
   }
 
   .slide-container h2::before,
@@ -113,18 +118,23 @@
 
   .icon-wrapper {
     width: 90%;
-    padding: 15px;
   }
 
   .icon {
-    font-size: 4.5rem;
+    font-size: 5rem; /* Reduce ligeramente el tamaño para pantallas medianas */
+  }
+
+  .icon-slider {
+    gap: 15px; /* Reduce el espacio entre los ítems */
   }
 }
 
 @media (max-width: 768px) {
+  .slide-container {
+    width: 100%;
+  }
   .slide-container h2 {
     font-size: 20px;
-    padding: 15px;
   }
 
   .slide-container h2::before,
@@ -142,18 +152,20 @@
 
   .icon-wrapper {
     width: 95%;
-    padding: 10px;
   }
 
   .icon {
-    font-size: 4rem;
+    font-size: 4.5rem; /* Ajusta el tamaño para pantallas más pequeñas */
+  }
+
+  .icon-slider {
+    gap: 10px; /* Reduce el espacio entre los ítems */
   }
 }
 
 @media (max-width: 480px) {
   .slide-container h2 {
     font-size: 18px;
-    padding: 10px;
   }
 
   .slide-container h2::before,
@@ -171,10 +183,13 @@
 
   .icon-wrapper {
     width: 100%;
-    padding: 5px;
   }
 
   .icon {
-    font-size: 3.5rem;
+    font-size: 4rem; /* Ajusta el tamaño para móviles */
+  }
+
+  .icon-slider {
+    gap: 5px; /* Reduce el espacio entre los ítems para pantallas muy pequeñas */
   }
 }

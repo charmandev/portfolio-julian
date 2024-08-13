@@ -7,6 +7,8 @@
   font-family: Arial, sans-serif;
   position: relative; /* Necesario para el posicionamiento absoluto del fondo */
   align-items: center;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Evita el scroll horizontal */
 }
 
 .background-container {

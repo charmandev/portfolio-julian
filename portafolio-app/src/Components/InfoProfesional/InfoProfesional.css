@@ -152,6 +152,15 @@
   .compuImage {
     width: 200px; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
   }
+  .infoProfesionalContenedor {
+    flex-direction: column;
+  }
+  .CardContenedor {
+    width: 100%;
+    padding: 0;
+
+    margin: 0;
+  }
 }
 
 @media (max-width: 480px) {

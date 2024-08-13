@@ -17,4 +17,5 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #0f1428;
+  overflow-x: hidden; /* Evita el scroll horizontal */
 }
