@@ -1,18 +1,48 @@
-/* Contenedor principal que contiene todas las cartas */
-.blog-cards-container {
-  display: flex;
-  flex-wrap: wrap; /* Permite que las cartas se muevan a la siguiente fila si no hay suficiente espacio */
-  gap: 20px; /* Espacio entre las cartas */
-}
-
-/* Carta individual */
 .blog-card {
-  width: 300px; /* Mantén el ancho deseado para cada carta */
-  background-color: #111827;
+  width: 300px;
+  background-color: #111827; /* Dark background */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: white;
   font-family: "Arial", sans-serif;
   position: relative;
+}
+
+.blog-card-image {
+  width: 100%;
+  height: auto;
+}
+
+.blog-card-content {
+  padding: 15px;
+}
+
+.blog-card-time {
+  color: #8b8b8b; /* Gray color for time */
+  font-size: 12px;
+  display: block;
+}
+
+.blog-card-title {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.blog-card-read-time {
+  font-size: 12px;
+  color: #8b8b8b;
+}
+
+.blog-card-description {
+  font-size: 14px;
+  color: #d1d1d1;
+}
+
+.blog-card-favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
 }
