@@ -66,6 +66,11 @@
   gap: 20px; /* Espacio entre los ítems */
 }
 
+/* Agrega esta clase al final del archivo CSS */
+.icon-slider.paused {
+  animation-play-state: paused;
+}
+
 /* Animaciones */
 @keyframes slide {
   0% {
