@@ -1,6 +1,6 @@
 .blog-card {
   width: 300px;
-  background-color: #111827; /* Dark background */
+  background-color: #111827;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -19,7 +19,7 @@
 }
 
 .blog-card-time {
-  color: #8b8b8b; /* Gray color for time */
+  color: #8b8b8b;
   font-size: 12px;
   display: block;
 }

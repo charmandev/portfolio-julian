@@ -1,56 +1,65 @@
 .estudiosContainer {
   text-align: center;
   color: white;
-
-  position: relative; /* Asegura que z-index tenga efecto */
-  padding: 20px; /* Agrega padding para evitar que el contenido toque los bordes en pantallas pequeñas */
+  position: relative;
+  padding: 20px;
+  border-top: none;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% 1px;
+  margin-top: 100px;
 }
 
 .estudiosTitle {
-  position: relative; /* Necesario para posicionar los pseudo-elementos */
-  display: inline-block; /* Ajusta el contenedor al tamaño del texto */
+  position: relative;
+  display: inline-block;
   margin-top: 20px;
 }
 
 .estudiosTitle h3 {
-  color: #fff; /* Color del texto del título */
-  margin: 0; /* Elimina el margen predeterminado */
-  font-size: 24px; /* Tamaño de la fuente del título */
-  background-color: #895bf55d; /* Fondo semitransparente negro */
-  padding: 10px; /* Espaciado interno alrededor del texto */
-  border-radius: 5px; /* Bordes redondeados opcionales */
-  display: inline-block; /* Ajusta el fondo al tamaño del texto */
+  color: #fff;
+  margin: 0;
+  font-size: 24px;
+  background-color: #895bf55d;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
 }
 
 .estudiosTitle::before,
 .estudiosTitle::after {
   content: "";
   position: absolute;
-  top: 50%; /* Centra verticalmente */
-  transform: translateY(-50%); /* Ajusta la posición verticalmente */
-  width: 50px; /* Ancho de la línea (ajusta a tu preferencia) */
-  height: 1px; /* Altura de la línea */
-  background-color: #1eccd8; /* Color de la línea */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 1px;
+  background-color: #1eccd8;
 }
 
 .estudiosTitle::before {
-  left: -60px; /* Posiciona la línea a la izquierda del contenedor */
+  left: -60px;
 }
 
 .estudiosTitle::after {
-  right: -60px; /* Posiciona la línea a la derecha del contenedor */
+  right: -60px;
 }
 
 .estudioImage {
-  width: 300px; /* Ajusta según tus necesidades */
+  width: 300px;
   height: auto;
   border-radius: 8px;
-  position: relative; /* Necesario para el pseudo-elemento */
+  position: relative;
   animation: levitate 3s ease-in-out infinite;
-  filter: drop-shadow(0 0 5px #690661) drop-shadow(0 0 10px #f8c2f1); /* Borde rosita más sólido */
+  filter: drop-shadow(0 0 5px #690661) drop-shadow(0 0 10px #f8c2f1);
 }
 
-/* Animación para el efecto de levitación */
 @keyframes levitate {
   0% {
     transform: translateY(0);
@@ -65,14 +74,14 @@
 
 .estudiosContent {
   width: 100%;
-  height: auto; /* Permite que el contenedor ajuste su altura según el contenido */
+  height: auto;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 50px;
   text-align: center;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas en pantallas pequeñas */
+  flex-wrap: wrap;
 }
 
 .cardWrapper {
@@ -82,20 +91,19 @@
   align-items: center;
 }
 
-/* Media Queries */
 @media (max-width: 1024px) {
   .estudiosTitle h3 {
-    font-size: 22px; /* Reduce el tamaño del texto para pantallas medianas */
-    padding: 8px; /* Reduce el padding para mantener la proporción */
+    font-size: 22px;
+    padding: 8px;
   }
 
   .estudiosTitle::before,
   .estudiosTitle::after {
-    width: 40px; /* Reduce la longitud de las líneas decorativas */
+    width: 40px;
   }
 
   .estudiosTitle::before {
-    left: -40px; /* Ajusta la posición de las líneas decorativas */
+    left: -40px;
   }
 
   .estudiosTitle::after {
@@ -103,19 +111,19 @@
   }
 
   .compuImage {
-    width: 250px; /* Reduce el tamaño de la imagen para pantallas medianas */
+    width: 250px;
   }
 }
 
 @media (max-width: 768px) {
   .estudiosTitle h3 {
-    font-size: 20px; /* Reduce aún más el tamaño del texto para pantallas pequeñas */
+    font-size: 20px;
     padding: 6px;
   }
 
   .estudiosTitle::before,
   .estudiosTitle::after {
-    width: 30px; /* Reduce más la longitud de las líneas decorativas */
+    width: 30px;
   }
 
   .estudiosTitle::before {
@@ -127,28 +135,29 @@
   }
 
   .compuImage {
-    width: 200px; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+    width: 200px;
   }
+
   .estudiosContent {
     flex-direction: column;
   }
+
   .cardWrapper {
     width: 100%;
     padding: 0;
-
     margin: 0;
   }
 }
 
 @media (max-width: 480px) {
   .estudiosTitle h3 {
-    font-size: 18px; /* Ajusta el tamaño del texto para pantallas muy pequeñas */
+    font-size: 18px;
     padding: 5px;
   }
 
   .estudiosTitle::before,
   .estudiosTitle::after {
-    width: 20px; /* Ajusta más las líneas decorativas */
+    width: 20px;
   }
 
   .estudiosTitle::before {
@@ -160,6 +169,6 @@
   }
 
   .compuImage {
-    width: 150px; /* Reduce más el tamaño de la imagen para móviles */
+    width: 150px;
   }
 }

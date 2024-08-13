@@ -41,13 +41,13 @@
   height: auto;
   margin: 20px;
   border-radius: 8px;
-  filter: grayscale(100%); /* Blanco y negro por defecto */
-  transition: filter 0.3s ease, transform 0.3s ease; /* Transición suave */
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .profile-image:hover {
-  filter: grayscale(0%); /* Quitar el efecto blanco y negro */
-  transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+  filter: grayscale(0%);
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {

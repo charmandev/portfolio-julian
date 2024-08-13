@@ -1,4 +1,3 @@
-/* Estilos generales del navbar */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -11,8 +10,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  box-sizing: border-box; /* Incluye padding en el ancho total */
-  position: relative; /* Asegura que el posicionamiento absoluto dentro del navbar funcione */
+  box-sizing: border-box;
+  position: relative;
 }
 
 .container {
@@ -31,32 +30,29 @@ body {
   margin-left: 50px;
 }
 
-/* Botón toggler */
 .navbar-toggler {
-  background-color: transparent; /* Fondo del botón de toggle */
-  border: none; /* Elimina el borde del botón */
+  background-color: transparent;
+  border: none;
   font-size: 1.5rem;
-  cursor: pointer; /* Asegura que el botón sea clickeable */
-  position: absolute; /* Posiciona el botón de forma absoluta */
-  right: 50px; /* Ajusta la distancia desde el borde derecho */
-  display: none; /* Oculta el botón por defecto */
-  transition: background-color 0.3s, transform 0.3s; /* Añade transición para el fondo y la transformación */
-  padding: 0.5rem; /* Espacio interno */
-  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer;
+  position: absolute;
+  right: 50px;
+  display: none;
+  transition: background-color 0.3s, transform 0.3s;
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 
-/* Cambios al pasar el ratón por encima del botón */
 .navbar-toggler:hover {
-  background-color: #555; /* Cambia el fondo al pasar el ratón */
+  background-color: #555;
 }
 
-/* Icono del botón toggler */
 .navbar-toggler-icon {
   width: 25px;
   height: 2px;
   background-color: #fff;
   position: relative;
-  transition: background-color 0.3s; /* Transición para el color de fondo */
+  transition: background-color 0.3s;
 }
 
 .navbar-toggler-icon::before,
@@ -67,7 +63,7 @@ body {
   background-color: #fff;
   position: absolute;
   left: 0;
-  transition: transform 0.3s, background-color 0.3s; /* Transición para la transformación y el color de fondo */
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .navbar-toggler-icon::before {
@@ -78,22 +74,20 @@ body {
   top: 7px;
 }
 
-/* Animación para cuando el menú está abierto */
 .navbar-toggler.active .navbar-toggler-icon {
-  background-color: transparent; /* Hace el centro transparente */
+  background-color: transparent;
 }
 
 .navbar-toggler.active .navbar-toggler-icon::before {
-  transform: rotate(45deg); /* Rota la barra superior */
-  top: 0; /* Mueve la barra superior para que se cruce con la inferior */
+  transform: rotate(45deg);
+  top: 0;
 }
 
 .navbar-toggler.active .navbar-toggler-icon::after {
-  transform: rotate(-45deg); /* Rota la barra inferior */
-  top: 0; /* Mueve la barra inferior para que se cruce con la superior */
+  transform: rotate(-45deg);
+  top: 0;
 }
 
-/* Menú de navegación */
 .navbar-menu {
   display: flex;
   align-items: center;
@@ -122,7 +116,6 @@ body {
   background-color: #555;
 }
 
-/* Estilos para el menú responsivo */
 @media (max-width: 768px) {
   .navbar-menu {
     position: absolute;
@@ -131,7 +124,7 @@ body {
     width: 100%;
     flex-direction: column;
     display: none;
-    background-color: #333; /* Fondo para el menú desplegable en pantallas pequeñas */
+    background-color: #333;
   }
 
   .navbar-menu.active {
@@ -147,11 +140,10 @@ body {
   }
 
   .navbar-toggler {
-    display: block; /* Muestra el botón en pantallas móviles */
+    display: block;
   }
 }
 
-/* Asegúrate de ocultar el botón de toggler en el menú desplegable si no es necesario */
 .navbar-menu.active .navbar-toggler {
   display: none;
 }

@@ -6,7 +6,7 @@ const Blogs = () => {
   return (
     <div className="BlogsContainer">
       <div className="BlogTitle">
-        <h3>Estudios</h3>
+        <h3>Blog</h3>
       </div>
       <div className="contenedorBlogCards">
         <BlogCard

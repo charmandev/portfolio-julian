@@ -22,7 +22,6 @@
   }
 }
 
-/* Estilos para pantallas de hasta 992px */
 @media (max-width: 992px) {
   .code-container {
     width: 450px;
@@ -35,6 +34,7 @@
     position: relative;
   }
 }
+
 @media (max-width: 768px) {
   .code-container {
     width: 300px;
@@ -53,8 +53,8 @@
   justify-content: flex-start;
   padding: 8px;
   background-color: #0b0e32;
-  position: relative; /* Necesario para la pseudo-clase ::before */
-  z-index: 1; /* Asegura que el borde RGB esté en la parte superior */
+  position: relative;
+  z-index: 1;
   border-bottom: 1px solid grey;
 }
 
@@ -64,7 +64,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 2px; /* Grosor del borde */
+  height: 2px;
   background: linear-gradient(
     90deg,
     #182080,
@@ -72,7 +72,7 @@
     rgba(121, 11, 247, 0.5),
     rgba(18, 18, 204, 0.5)
   );
-  z-index: -1; /* Asegura que el borde RGB esté detrás del contenido del header */
+  z-index: -1;
 }
 
 .circle {
@@ -86,9 +86,11 @@
 .red {
   background-color: #ff6c6b;
 }
+
 .yellow {
   background-color: #f5be42;
 }
+
 .green {
   background-color: #66d9ef;
 }
@@ -103,24 +105,31 @@
 .keyword {
   color: #f92672;
 }
+
 .variable {
   color: #a6e22e;
 }
+
 .operator {
   color: #f8f8f2;
 }
+
 .string {
   color: #e6db74;
 }
+
 .property {
   color: #66d9ef;
 }
+
 .boolean {
   color: #f92672;
 }
+
 .number {
   color: #ae81ff;
 }
+
 .bracket {
   color: #f8f8f2;
 }

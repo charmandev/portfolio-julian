@@ -1,54 +1,54 @@
 .accordion-wrapper {
   width: 50%;
   height: auto;
-  margin: 0 auto; /* Centrar horizontalmente */
-  padding: 20px; /* Espaciado interno */
+  margin: 0 auto;
+  padding: 20px;
   box-sizing: border-box;
 }
 
 .title-wrapper {
   display: flex;
   align-items: center;
-  margin-bottom: 20px; /* Espacio debajo del título */
+  margin-bottom: 20px;
 }
 
 .projects-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff; /* Color del texto del título */
-  margin: 0; /* Elimina el margen predeterminado */
+  color: #fff;
+  margin: 0;
   padding: 10px;
   background-color: #3c2e72;
   border-radius: 10px;
-  z-index: 1; /* Asegura que el título esté sobre las líneas */
+  z-index: 1;
 }
 
 .line {
-  flex-grow: 1; /* Hace que la línea ocupe el espacio restante */
-  height: 2px; /* Grosor de la línea */
-  background-color: #167080; /* Color de la línea */
-  z-index: 0; /* Asegura que la línea esté detrás del título */
+  flex-grow: 1;
+  height: 2px;
+  background-color: #167080;
+  z-index: 0;
 }
 
 .accordion-item {
   border: 1px solid #444;
-  border-radius: 5px; /* Bordes redondeados en cada ítem */
+  border-radius: 5px;
   margin-top: 10px;
   overflow: hidden;
-  background-color: #27023f71; /* Fondo del contenedor */
+  background-color: #27023f71;
 }
 
 .accordion-title {
-  background-color: #490e6b25; /* Color de fondo del título */
-  color: #fff; /* Color del texto del título */
-  padding: 15px; /* Más espaciado para el título */
+  background-color: #490e6b25;
+  color: #fff;
+  padding: 15px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  transition: background-color 0.3s ease;
 }
 
 .accordion-title:hover {
-  background-color: #575757; /* Color de fondo al pasar el ratón */
+  background-color: #575757;
 }
 
 .accordion-content {
@@ -56,15 +56,15 @@
   justify-content: center;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease, padding 0.5s ease; /* Transiciones suaves */
-  background-color: #1e1e1e; /* Fondo del contenido */
-  color: #e0e0e0; /* Color del texto */
-  padding: 0 15px; /* Espaciado interno en el contenido */
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  padding: 0 15px;
 }
 
 .accordion-content.active {
-  max-height: 500px; /* Ajusta según el contenido */
-  padding: 15px 15px; /* Espaciado interno cuando está activo */
+  max-height: 500px;
+  padding: 15px 15px;
 }
 
 .code-display-container {
@@ -76,12 +76,12 @@
 /* Estilos adaptativos */
 @media (max-width: 768px) {
   .accordion-wrapper {
-    width: 80%; /* Ajusta el ancho para pantallas más pequeñas */
+    width: 80%;
   }
 }
 
 @media (max-width: 480px) {
   .accordion-wrapper {
-    width: 80%; /* Ajusta el ancho para pantallas muy pequeñas */
+    width: 80%;
   }
 }
