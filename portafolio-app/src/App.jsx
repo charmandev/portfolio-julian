@@ -18,6 +18,7 @@ import {
 } from "react-icons/fa";
 import Button from "./Components/Button/Button";
 import "./App.css";
+import Estudios from "./Components/Estudios/Estudios";
 
 function App() {
   return (
@@ -110,6 +111,10 @@ const Home = () => (
     <div className="scrollContainer">
       {" "}
       <ScrollableCodeDisplay />
+    </div>
+
+    <div className="EstudiosContainer">
+      <Estudios />
     </div>
   </div>
 );
