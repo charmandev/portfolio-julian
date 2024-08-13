@@ -76,12 +76,12 @@
 /* Estilos adaptativos */
 @media (max-width: 768px) {
   .accordion-wrapper {
-    width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+    width: 80%; /* Ajusta el ancho para pantallas más pequeñas */
   }
 }
 
 @media (max-width: 480px) {
   .accordion-wrapper {
-    width: 95%; /* Ajusta el ancho para pantallas muy pequeñas */
+    width: 80%; /* Ajusta el ancho para pantallas muy pequeñas */
   }
 }
