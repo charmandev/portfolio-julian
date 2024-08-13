@@ -1,6 +1,6 @@
-/* ScrollableCodeDisplay.css */
 .accordion-wrapper {
-  width: 100%;
+  width: 50%;
+  height: auto;
   margin: 0 auto; /* Centrar horizontalmente */
   padding: 20px; /* Espaciado interno */
   box-sizing: border-box;
@@ -17,16 +17,17 @@
   font-weight: bold;
   color: #fff; /* Color del texto del título */
   margin: 0; /* Elimina el margen predeterminado */
-  margin-right: 20px; /* Espacio entre el título y la línea */
-  background-color: #3c2e72;
   padding: 10px;
+  background-color: #3c2e72;
   border-radius: 10px;
+  z-index: 1; /* Asegura que el título esté sobre las líneas */
 }
 
 .line {
   flex-grow: 1; /* Hace que la línea ocupe el espacio restante */
   height: 2px; /* Grosor de la línea */
-  background-color: #42057c5d; /* Color de la línea */
+  background-color: #167080; /* Color de la línea */
+  z-index: 0; /* Asegura que la línea esté detrás del título */
 }
 
 .accordion-item {
@@ -51,6 +52,8 @@
 }
 
 .accordion-content {
+  display: flex;
+  justify-content: center;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.5s ease; /* Transiciones suaves */
