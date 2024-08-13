@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import CodeDisplay from "./Components/CodeDisplay/CodeDisplay";
 import ProfileSection from "./Components/ProfileSection/ProfileSection";
@@ -8,6 +7,7 @@ import Slide from "./Components/Slide/Slide";
 import ScrollableCodeDisplay from "./Components/Experiencies/ScrollableCodeDisplay";
 import InfoProfesional from "./Components/InfoProfesional/InfoProfesional";
 import Estudios from "./Components/Estudios/Estudios";
+import Blogs from "./Components/Blogs/Blogs";
 import {
   FaGithub,
   FaLinkedin,
@@ -18,6 +18,7 @@ import {
 } from "react-icons/fa";
 import Button from "./Components/Button/Button";
 import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -115,6 +116,10 @@ const Home = () => (
     </div>
     <div className="EstudiosContainer">
       <Estudios />
+    </div>
+    {/* Aquí agregamos el nuevo contenedor Blog */}
+    <div className="BlogsContainer">
+      <Blogs />
     </div>
   </div>
 );

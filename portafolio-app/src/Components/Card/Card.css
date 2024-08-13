@@ -12,7 +12,25 @@
   transition: width 0.3s ease; /* Suaviza el cambio de tamaño */
 }
 
-/* Media query para pantallas más pequeñas */
+/* Pseudo-elemento para el borde neón superior */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Ajusta para el efecto deseado */
+  left: 0;
+  width: 100%;
+  height: 10px; /* Altura del borde neón */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 105, 180, 0.6),
+    rgba(255, 105, 180, 0)
+  );
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.8); /* Efecto de neón */
+  border-radius: 8px 8px 0 0;
+  z-index: 1;
+}
+
+/* Media queries para pantallas más pequeñas */
 @media (max-width: 768px) {
   .card {
     width: 90%; /* Ajusta el ancho al 90% del contenedor padre */
@@ -27,33 +45,6 @@
     max-width: 300px; /* Limita el ancho máximo para pantallas muy pequeñas */
     padding: 15px; /* Ajusta el relleno para pantallas muy pequeñas */
   }
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  pointer-events: none;
-  transition: background 0.3s ease;
-  z-index: 1;
-  background: radial-gradient(
-    circle at var(--x) var(--y),
-    rgba(255, 105, 180, 0.4),
-    rgba(255, 105, 180, 0) 50%
-  );
-  mix-blend-mode: multiply;
-}
-
-.card:hover::before {
-  background: radial-gradient(
-    circle at var(--x) var(--y),
-    rgba(255, 105, 180, 0.6),
-    rgba(255, 105, 180, 0) 60%
-  );
 }
 
 .card-header {

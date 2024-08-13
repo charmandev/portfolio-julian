@@ -147,6 +147,13 @@
   width: 100%;
   height: auto;
 }
+
+.BlogContainer {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
 @media (max-width: 1200px) {
   /* Estilos para pantallas de hasta 1200px */
 }
