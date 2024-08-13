@@ -1,7 +1,8 @@
 // Slide.jsx
 import React from "react";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-import "./Slide.css";
+import IconItem from "../IconItem/IconItem"; // Asegúrate de importar el componente
+import "./Slide.css"; // Importa el archivo CSS para el componente Slide
 
 const Slide = () => {
   return (
@@ -9,26 +10,11 @@ const Slide = () => {
       <h2>Skills</h2>
       <div className="icon-wrapper">
         <div className="icon-slider">
-          <div className="icon-item">
-            <FaHtml5 className="icon" />
-            <div className="icon-description">HTML5</div>
-          </div>
-          <div className="icon-item">
-            <FaCss3Alt className="icon" />
-            <div className="icon-description">CSS3</div>
-          </div>
-          <div className="icon-item">
-            <FaJs className="icon" />
-            <div className="icon-description">JavaScript</div>
-          </div>
-          <div className="icon-item">
-            <FaReact className="icon" />
-            <div className="icon-description">React</div>
-          </div>
-          <div className="icon-item">
-            <FaNodeJs className="icon" />
-            <div className="icon-description">Node.js</div>
-          </div>
+          <IconItem icon={FaHtml5} description="HTML5" color="html5" />
+          <IconItem icon={FaCss3Alt} description="CSS3" color="css3" />
+          <IconItem icon={FaJs} description="JavaScript" color="js" />
+          <IconItem icon={FaReact} description="React" color="react" />
+          <IconItem icon={FaNodeJs} description="Node.js" color="nodejs" />
         </div>
       </div>
     </div>
