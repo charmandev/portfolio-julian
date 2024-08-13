@@ -193,3 +193,35 @@
 /* Estilos para pantallas de hasta 576px */
 @media (max-width: 576px) {
 }
+.scroll-to-top {
+  z-index: 10;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(
+    135deg,
+    #ec4899,
+    #8b5cf6
+  ); /* Gradiente de rosa a violeta */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.3s; /* Cambiado background a background */
+}
+
+.scroll-to-top:hover {
+  background: linear-gradient(
+    135deg,
+    #f20ddf,
+    #a855f7
+  ); /* Gradiente de rosa más claro a violeta más claro */
+  transform: scale(1.1);
+}

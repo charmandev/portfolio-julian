@@ -7,6 +7,7 @@ import About from "./Components/Routes/About";
 import Slide from "./Components/Slide/Slide";
 import ScrollableCodeDisplay from "./Components/Experiencies/ScrollableCodeDisplay";
 import InfoProfesional from "./Components/InfoProfesional/InfoProfesional";
+import Estudios from "./Components/Estudios/Estudios";
 import {
   FaGithub,
   FaLinkedin,
@@ -14,11 +15,9 @@ import {
   FaWhatsapp,
   FaUserFriends,
   FaDownload,
-  FaLaptop,
 } from "react-icons/fa";
 import Button from "./Components/Button/Button";
 import "./App.css";
-import Estudios from "./Components/Estudios/Estudios";
 
 function App() {
   return (
@@ -31,6 +30,9 @@ function App() {
             <Route path="/about" element={<About />} />
           </Routes>
         </div>
+        <button className="scroll-to-top" onClick={scrollToTop}>
+          &uarr;
+        </button>
       </div>
     </Router>
   );
@@ -109,14 +111,19 @@ const Home = () => (
       <Slide />
     </div>
     <div className="scrollContainer">
-      {" "}
       <ScrollableCodeDisplay />
     </div>
-
     <div className="EstudiosContainer">
       <Estudios />
     </div>
   </div>
 );
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
 
 export default App;
