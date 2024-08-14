@@ -102,23 +102,23 @@ const Home = () => (
         <CodeDisplay />
       </div>
     </div>
-    <div className="Info">
+    <div id="infoPersonal" className="Info">
       <ProfileSection />
     </div>
-    <div className="infoProfesional">
+    <div id="Experiences" className="infoProfesional">
       <InfoProfesional />
     </div>
-    <div className="slideContenedor">
+    <div id="Skills" className="slideContenedor">
       <Slide />
     </div>
-    <div className="scrollContainer">
+    <div id="Projects" className="scrollContainer">
       <ScrollableCodeDisplay />
     </div>
-    <div className="EstudiosContainer">
+    <div id="Studies" className="EstudiosContainer">
       <Estudios />
     </div>
     {/* Aquí agregamos el nuevo contenedor Blog */}
-    <div className="BlogsContainer">
+    <div id="BlogSeccion" className="BlogsContainer">
       <Blogs />
     </div>
   </div>

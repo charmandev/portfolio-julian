@@ -1,12 +1,19 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Importa Link de react-router-dom
-import "./Navbar.css"; // Asegúrate de que este archivo CSS esté correctamente importado
-import About from "../Routes/About";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleSmoothScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -25,34 +32,59 @@ const Navbar = () => {
         <div className={`navbar-menu ${isOpen ? "active" : ""}`}>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/about" className="nav-link">
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={() => handleSmoothScroll("infoPersonal")}
+              >
                 About
               </Link>
             </li>
+
             <li className="nav-item">
-              <a href="#" className="nav-link">
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={() => handleSmoothScroll("Experiences")}
+              >
+                Experience
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={() => handleSmoothScroll("Skills")}
+              >
                 Skills
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link">
-                Experience{" "}
-              </a>
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={() => handleSmoothScroll("Projects")}
+              >
+                Projects
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link">
-                Projects{" "}
-              </a>
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={() => handleSmoothScroll("Studies")}
+              >
+                Education
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link">
-                Blogs{" "}
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                Education{" "}
-              </a>
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={() => handleSmoothScroll("BlogSeccion")}
+              >
+                Blogs
+              </Link>
             </li>
           </ul>
         </div>

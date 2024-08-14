@@ -124,7 +124,7 @@ body {
     width: 100%;
     flex-direction: column;
     display: none;
-    background-color: #333;
+    background-color: #27143d;
   }
 
   .navbar-menu.active {
