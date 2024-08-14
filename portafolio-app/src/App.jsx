@@ -46,7 +46,8 @@ const Home = () => (
     <div className="contenido">
       <div className="Texto">
         <p>
-          Hola, <br /> <span className="text-celeste">Soy Julian.</span> <br />
+          Hola, <br />{" "}
+          <span className="text-celeste">Soy Julian M.Gonzales</span> <br />
           <span className="text-rosa"> Devops Engineer</span> <br /> And
           <span className="text-rosa"> Developer</span>
         </p>
