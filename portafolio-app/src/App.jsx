@@ -17,6 +17,7 @@ import {
   FaDownload,
 } from "react-icons/fa";
 import Button from "./Components/Button/Button";
+import Contacto from "./Components/Contacto/Contacto";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -120,6 +121,10 @@ const Home = () => (
     {/* Aquí agregamos el nuevo contenedor Blog */}
     <div id="BlogSeccion" className="BlogsContainer">
       <Blogs />
+    </div>
+
+    <div className="ContactContainer">
+      <Contacto />
     </div>
   </div>
 );

@@ -109,11 +109,13 @@ body {
   text-decoration: none;
   padding: 0.5rem 1rem;
   display: block;
-  transition: background-color 0.3s;
+  transition: background-color 1s;
+  border-radius: 10px;
 }
 
 .nav-link:hover {
-  background-color: #555;
+  color: #ce3fd3;
+  background-color: #cfcfcf;
 }
 
 @media (max-width: 768px) {
