@@ -23,7 +23,7 @@
 
 .contacto-header p {
   font-size: 18px;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -209,7 +209,7 @@
 
   .contacto-header p {
     font-size: 12px;
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .form-container {
