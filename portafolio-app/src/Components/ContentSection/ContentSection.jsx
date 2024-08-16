@@ -11,6 +11,23 @@ import Button from "../Button/Button";
 import CodeDisplay from "../CodeDisplay/CodeDisplay";
 import "./ContentSection.css";
 
+const codeString = `
+const coder = {
+  name: 'Julian M. Gonzalez',
+  skills: ['Docker', 'AWS', 'Github Actions', 'React', 'Terraform', 'bash', 'python', 'Nodejs', 'CI/CD', 'Kubernetes', 'ArgoCD', 'JavaScript'],
+  hardWorker: true,
+  quickLearner: true,
+  problemSolver: true,
+  hireable: function() {
+    return (
+      this.hardWorker &&
+      this.problemSolver &&
+      this.skills.length >= 5
+    );
+  }
+};
+`;
+
 const ContentSection = () => {
   return (
     <div className="contenido">
@@ -72,7 +89,7 @@ const ContentSection = () => {
         </div>
       </div>
       <div className="CodeDescripcion">
-        <CodeDisplay />
+        <CodeDisplay codeString={codeString} />
       </div>
     </div>
   );

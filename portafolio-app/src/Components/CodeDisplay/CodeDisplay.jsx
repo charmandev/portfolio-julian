@@ -1,24 +1,9 @@
 import React from "react";
 import "./CodeDisplay.css";
 
-const codeString = `
-const coder = {
-  name: 'Abu Said',
-  skills: ['Docker', 'AWS', 'Github Actions', 'React', 'Terraform', 'bash', 'python', 'Nodejs', 'CI/CD', 'Kubernetes', 'ArgoCD', 'JavaScript'],
-  hardWorker: true,
-  quickLearner: true,
-  problemSolver: true,
-  hireable: function() {
-    return (
-      this.hardWorker &&
-      this.problemSolver &&
-      this.skills.length >= 5
-    );
-  }
-};
-`;
-
 const syntaxHighlight = (code) => {
+  if (!code) return ""; // Retorna un string vacío si code es undefined o null
+
   const patterns = {
     keyword: /\b(const|function|return|this|true|false)\b/g,
     variable: /\b(coder)\b/g,
@@ -31,7 +16,6 @@ const syntaxHighlight = (code) => {
     bracket: /[\[\]{}()]/g,
   };
 
-  // No need to escape characters here
   return code.replace(
     new RegExp(
       Object.values(patterns)
@@ -50,7 +34,7 @@ const syntaxHighlight = (code) => {
   );
 };
 
-const CodeDisplay = () => {
+const CodeDisplay = ({ codeString = "" }) => {
   return (
     <div className="code-container">
       <div className="code-header">
