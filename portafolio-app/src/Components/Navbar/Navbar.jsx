@@ -20,7 +20,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <a href="/" className="navbar-brand">
-          Julian
+          Julian <br />
+          <span> M. Gonzalez</span>
         </a>
         <button
           className={`navbar-toggler ${isOpen ? "active" : ""}`}

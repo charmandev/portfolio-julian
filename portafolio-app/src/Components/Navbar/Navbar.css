@@ -28,6 +28,28 @@ body {
   font-weight: 600;
   font-size: 1.7rem;
   margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s ease, transform 0.3s ease; /* Añadir transición para color y transformación */
+}
+
+.navbar-brand:hover {
+  color: #1affd1; /* Cambia el color al pasar el mouse */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+.navbar-brand span {
+  font-size: 0.7rem;
+  color: antiquewhite;
+  margin: 0;
+  padding: 0;
+  transition: color 0.3s ease; /* Añadir transición al color del span */
+}
+
+.navbar-brand:hover span {
+  color: #e0e0e0; /* Cambia el color del span al pasar el mouse */
 }
 
 .navbar-toggler {
