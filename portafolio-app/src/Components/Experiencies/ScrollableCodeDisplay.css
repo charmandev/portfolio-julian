@@ -35,7 +35,6 @@
   border-radius: 5px;
   margin-top: 10px;
   overflow: hidden;
-  background-color: #27023f71;
 }
 
 .accordion-title {
@@ -57,7 +56,6 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.5s ease;
-  background-color: #1e1e1e;
   color: #e0e0e0;
   padding: 0 15px;
 }

@@ -12,6 +12,11 @@
 .blog-card-image {
   width: 100%;
   height: auto;
+  transition: transform 0.3s ease; /* Agrega una transición suave al zoom */
+}
+
+.blog-card:hover .blog-card-image {
+  transform: scale(1.2); /* Aumenta el tamaño de la imagen al pasar el mouse */
 }
 
 .blog-card-content {

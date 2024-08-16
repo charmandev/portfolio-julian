@@ -172,3 +172,18 @@
     width: 150px;
   }
 }
+.badge-container {
+  display: flex;
+  margin-top: 50px;
+  gap: 10px; /* Espacio entre las insignias */
+  justify-content: center; /* Centra las insignias horizontalmente */
+}
+
+.badge-link {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.badge-image {
+  width: 100px; /* Ajusta el tamaño de las insignias si es necesario */
+  height: auto; /* Mantiene la proporción de las insignias */
+}
