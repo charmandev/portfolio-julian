@@ -18,14 +18,20 @@ const ScrollableCodeDisplay = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.innerHeight + window.scrollY;
+      const marginTop = 100; // Adjust this value for margin from the top
+      const marginBottom = 300; // Adjust this value for margin from the bottom
+
       accordionRefs.current.forEach((ref, index) => {
         if (ref) {
           const { top, bottom } = ref.getBoundingClientRect();
-          const margin = 100; // Adjust this value for more or less margin
           const refTop = top + window.scrollY;
           const refBottom = bottom + window.scrollY;
 
-          if (refBottom > window.scrollY - margin && refTop < scrollPosition) {
+          // Activate the accordion if it is within the viewport margin range
+          if (
+            refBottom > window.scrollY - marginTop &&
+            refTop < scrollPosition - marginBottom
+          ) {
             setActiveIndex(index);
           }
         }
