@@ -40,8 +40,7 @@ const ContentSection = () => {
           Hello, <br />{" "}
           <span className="text-celeste">I am Julian M. Gonzalez</span> <br />
           <span className="text-rosa"> DevOps Engineer</span> <br /> And
-          Fullstack
-          <span className="text-rosa"> Developer</span>
+          <span className="text-rosa">Fullstack Developer</span>
         </p>
 
         <div className="botones">
