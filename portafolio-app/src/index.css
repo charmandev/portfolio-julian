@@ -10,7 +10,12 @@
   font-style: normal;
 }
 
-/* index.css */
+/* Suaviza el desplazamiento en toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estiliza el cuerpo de la página */
 body {
   width: 100%;
   height: auto;
@@ -18,4 +23,27 @@ body {
   flex-direction: column;
   background-color: #0f1428;
   overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+/* Suaviza las barras de desplazamiento */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #280f28; /* Fondo de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f701ff; /* Color del pulgar */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/* Estilo de transición para elementos interactivos */
+.menu {
+  transition: all 0.3s ease-in-out;
 }
