@@ -9,6 +9,8 @@ import Estudios from "./Components/Estudios/Estudios";
 import Blogs from "./Components/Blogs/Blogs";
 import Contacto from "./Components/Contacto/Contacto";
 import ContentSection from "./Components/ContentSection/ContentSection";
+import Badges from "./Components/Badge/Badge";
+import Footer from "./Components/Footer/Footer";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -22,6 +24,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
           </Routes>
+
+          <Footer />
         </div>
         <button className="scroll-to-top" onClick={scrollToTop}>
           &uarr;
@@ -49,6 +53,9 @@ const Home = () => (
     </div>
     <div id="Studies" className="EstudiosContainer">
       <Estudios />
+    </div>
+    <div className="insignias">
+      <Badges />
     </div>
     {/* Aquí agregamos el nuevo contenedor Blog */}
     <div id="BlogSeccion" className="BlogsContainer">

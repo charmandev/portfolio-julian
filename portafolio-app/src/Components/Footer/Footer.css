@@ -1,0 +1,36 @@
+.footer {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  z-index: 10;
+  justify-content: space-between;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+.FooterIcon {
+  width: 10px;
+  height: 10px;
+  color: white;
+}
+.footer-link {
+  color: #fff; /* Texto blanco */
+  text-decoration: none; /* Elimina subrayado de los enlaces */
+  margin: 0 15px; /* Espaciado horizontal entre enlaces */
+  display: flex; /* Usa flexbox para alinear el icono y el texto */
+  align-items: center; /* Centra verticalmente el icono y el texto */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+.footer-links {
+  display: flex;
+}

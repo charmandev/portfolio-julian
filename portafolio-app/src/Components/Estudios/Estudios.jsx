@@ -37,35 +37,6 @@ const Estudios = () => {
           />
         </div>
       </div>
-      <div className="estudiosTitle">
-        <h3>Insignias</h3>
-      </div>
-      <div className="badge-container">
-        <a
-          href="https://www.credly.com/badges/6f44dc9f-f344-477d-82fe-9e39729d0a07/public_url"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="badge-link"
-        >
-          <img
-            src={githubCertification}
-            alt="GitHub Certification"
-            className="badge-image"
-          />
-        </a>
-        <a
-          href="https://www.credly.com/badges/6b0b7b70-b42f-433f-ab25-1ae41eea6fcb/public_url"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="badge-link"
-        >
-          <img
-            src={actionCertification}
-            alt="Action Certification"
-            className="badge-image"
-          />
-        </a>
-      </div>
     </div>
   );
 };

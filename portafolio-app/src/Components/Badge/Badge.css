@@ -1,0 +1,58 @@
+.badges-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.badges-title {
+  font-size: 3rem;
+  font-weight: 200;
+  color: #f5dd03;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.badges-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  position: relative;
+  display: inline-block;
+  padding: 50px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.badge img {
+  width: 150px;
+  height: auto;
+  transition: filter 0.3s;
+  filter: drop-shadow(0 0 0 transparent); /* Invisible shadow initially */
+}
+
+.badge:hover img {
+  animation: heartbeat 1s infinite;
+  filter: drop-shadow(0 0 10px gold); /* Apply golden shadow on hover */
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.badge-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 10px;
+}

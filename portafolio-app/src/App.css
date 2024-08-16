@@ -203,7 +203,7 @@
 .scroll-to-top {
   z-index: 10;
   position: fixed;
-  bottom: 20px;
+  bottom: 50px;
   right: 20px;
   background: linear-gradient(
     135deg,
