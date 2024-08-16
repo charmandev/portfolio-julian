@@ -29,6 +29,10 @@ const coder = {
 `;
 
 const ContentSection = () => {
+  const handleContactMeClick = () => {
+    window.open("https://wa.me/543543313903", "_blank");
+  };
+
   return (
     <div className="contenido">
       <div className="Texto">
@@ -65,7 +69,7 @@ const ContentSection = () => {
             <FaFacebook />
           </a>
           <a
-            href="https://wa.me/tu-numero"
+            href="https://wa.me/543543313903"
             className="boton"
             target="_blank"
             rel="noopener noreferrer"
@@ -78,13 +82,18 @@ const ContentSection = () => {
             text="CONTACT ME"
             icon={<FaUserFriends />}
             borderColor="rgba(255, 0, 150, 0.6)"
-            onClick={() => alert("Contact Me clicked!")}
+            onClick={handleContactMeClick} // Actualizar el manejador de clic
           />
           <Button
             text="GET RESUME"
             icon={<FaDownload />}
             borderColor="rgba(255, 94, 0, 0.6)"
-            onClick={() => alert("Get Resume clicked!")}
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/cv-julian.pdf"; // Ruta correcta al archivo en la carpeta public
+              link.download = "cv-julian.pdf";
+              link.click();
+            }}
           />
         </div>
       </div>

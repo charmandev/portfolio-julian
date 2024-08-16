@@ -24,9 +24,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
           </Routes>
-
-          <Footer />
         </div>
+        <Footer />
         <button className="scroll-to-top" onClick={scrollToTop}>
           &uarr;
         </button>

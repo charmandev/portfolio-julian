@@ -3,13 +3,13 @@
   color: #fff;
   text-align: center;
   padding: 20px;
-  position: fixed;
   bottom: 0;
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
   z-index: 10;
   justify-content: space-between;
 }
@@ -18,19 +18,65 @@
   margin: 0;
   font-size: 14px;
 }
+
 .FooterIcon {
   width: 10px;
   height: 10px;
   color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
+
 .footer-link {
-  color: #fff; /* Texto blanco */
-  text-decoration: none; /* Elimina subrayado de los enlaces */
-  margin: 0 15px; /* Espaciado horizontal entre enlaces */
-  display: flex; /* Usa flexbox para alinear el icono y el texto */
-  align-items: center; /* Centra verticalmente el icono y el texto */
-  transition: color 0.3s ease; /* Transición suave para el color */
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
 }
+
+.footer-link:hover .FooterIcon {
+  color: gold;
+  transform: scale(1.2);
+}
+
 .footer-links {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+
+  .footer-link {
+    margin: 5px 10px;
+  }
+
+  .FooterIcon {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .footer p {
+    font-size: 10px;
+  }
+
+  .footer-link {
+    margin: 5px;
+  }
 }
