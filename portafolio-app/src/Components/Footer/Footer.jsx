@@ -5,7 +5,7 @@ import "./Footer.css"; // Asegúrate de que el archivo CSS esté en el mismo dir
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>© Developer Portfolio by Julian M. Gonzales</p>
+      <p>© Developer Portfolio by Julian M. Gonzalez</p>
       <div className="footer-links">
         <a href="#" className="footer-link">
           <FaStar className="FooterIcon" />
