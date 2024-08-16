@@ -188,7 +188,7 @@
 }
 
 .badge-image {
-  width: 240px; /* Ajusta el tamaño de las insignias si es necesario */
+  width: 170px; /* Ajusta el tamaño de las insignias si es necesario */
   height: auto; /* Mantiene la proporción de las insignias */
   transition: transform 0.3s ease; /* Agrega una transición suave al efecto hover */
 }
