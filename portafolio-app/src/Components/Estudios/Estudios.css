@@ -175,8 +175,12 @@
 .badge-container {
   display: flex;
   margin-top: 50px;
+  flex-wrap: wrap;
   gap: 10px; /* Espacio entre las insignias */
   justify-content: center; /* Centra las insignias horizontalmente */
+  filter: drop-shadow(
+    0 10px 8px rgba(238, 203, 7, 0.699)
+  ); /* Aplica el filtro drop-shadow */
 }
 
 .badge-link {
@@ -184,6 +188,11 @@
 }
 
 .badge-image {
-  width: 100px; /* Ajusta el tamaño de las insignias si es necesario */
+  width: 240px; /* Ajusta el tamaño de las insignias si es necesario */
   height: auto; /* Mantiene la proporción de las insignias */
+  transition: transform 0.3s ease; /* Agrega una transición suave al efecto hover */
+}
+
+.badge-image:hover {
+  transform: scale(1.1); /* Escala la imagen al pasar el cursor */
 }
