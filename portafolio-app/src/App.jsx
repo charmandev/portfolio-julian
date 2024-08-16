@@ -46,11 +46,12 @@ const Home = () => (
     <div className="contenido">
       <div className="Texto">
         <p>
-          Hola, <br />{" "}
-          <span className="text-celeste">Soy Julian M.Gonzalez</span> <br />
-          <span className="text-rosa"> Devops Engineer</span> <br /> And
+          Hello, <br />{" "}
+          <span className="text-celeste">I am Julian M. Gonzalez</span> <br />
+          <span className="text-rosa"> DevOps Engineer</span> <br /> And
           <span className="text-rosa"> Developer</span>
         </p>
+
         <div className="botones">
           <a
             href="https://github.com/tu-perfil"

@@ -8,14 +8,15 @@ const ProfileSection = () => {
       <div className="text-container">
         <h2 className="title">WHO I AM?</h2>
         <p className="description">
-          My name is ABU SAID. I am a professional and enthusiastic programmer
-          in my daily life. I am a quick learner with a self-learning attitude.
-          I love to learn and explore new technologies and am passionate about
-          problem-solving. I love almost all the stacks of web application
-          development and love to make the web more open to the world. My core
-          skill is based on JavaScript and I love to do most of the things using
-          JavaScript. I am available for any kind of job opportunity that suits
-          my skills and interests.
+          I am a DevOps engineer with a passion for learning and applying new
+          technologies. I specialize in automations aligned with the SDLC and
+          Infrastructure as Code (IaC) practices, with experience in
+          implementing solutions using Docker and managing cloud services. I am
+          focused on growth in artificial intelligence and DevSecOps security,
+          integrating security practices throughout the development cycle. My
+          goal is to continue improving my skills and contribute innovative
+          solutions that optimize development and operations processes, ensuring
+          the continuous and secure delivery of products and services.
         </p>
       </div>
       <div className="image-container">

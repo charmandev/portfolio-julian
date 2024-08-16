@@ -4,7 +4,7 @@ import "./CodeDisplay.css";
 const codeString = `
 const coder = {
   name: 'Abu Said',
-  skills: ['React', 'NextJS', 'Redux', 'Express', 'NestJS', 'MySql', 'MongoDB', 'Docker', 'AWS'],
+  skills: ['Docker', 'AWS', 'Github Actions', 'React', 'Terraform', 'bash', 'python', 'Nodejs', 'CI/CD', 'Kubernetes', 'ArgoCD', 'JavaScript'],
   hardWorker: true,
   quickLearner: true,
   problemSolver: true,
