@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
-import CodeDisplay from "./Components/CodeDisplay/CodeDisplay";
 import ProfileSection from "./Components/ProfileSection/ProfileSection";
 import About from "./Components/Routes/About";
 import Slide from "./Components/Slide/Slide";
@@ -8,16 +7,8 @@ import ScrollableCodeDisplay from "./Components/Experiencies/ScrollableCodeDispl
 import InfoProfesional from "./Components/InfoProfesional/InfoProfesional";
 import Estudios from "./Components/Estudios/Estudios";
 import Blogs from "./Components/Blogs/Blogs";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
-  FaWhatsapp,
-  FaUserFriends,
-  FaDownload,
-} from "react-icons/fa";
-import Button from "./Components/Button/Button";
 import Contacto from "./Components/Contacto/Contacto";
+import ContentSection from "./Components/ContentSection/ContentSection";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -43,68 +34,7 @@ function App() {
 const Home = () => (
   <div>
     <div className="background-container"></div>
-    <div className="contenido">
-      <div className="Texto">
-        <p>
-          Hello, <br />{" "}
-          <span className="text-celeste">I am Julian M. Gonzalez</span> <br />
-          <span className="text-rosa"> DevOps Engineer</span> <br /> And
-          <span className="text-rosa"> Developer</span>
-        </p>
-
-        <div className="botones">
-          <a
-            href="https://github.com/tu-perfil"
-            className="boton"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://linkedin.com/in/tu-perfil"
-            className="boton"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://facebook.com/tu-perfil"
-            className="boton"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook />
-          </a>
-          <a
-            href="https://wa.me/tu-numero"
-            className="boton"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaWhatsapp />
-          </a>
-        </div>
-        <div className="custom-buttons">
-          <Button
-            text="CONTACT ME"
-            icon={<FaUserFriends />}
-            borderColor="rgba(255, 0, 150, 0.6)"
-            onClick={() => alert("Contact Me clicked!")}
-          />
-          <Button
-            text="GET RESUME"
-            icon={<FaDownload />}
-            borderColor="rgba(255, 94, 0, 0.6)"
-            onClick={() => alert("Get Resume clicked!")}
-          />
-        </div>
-      </div>
-      <div className="CodeDescripcion">
-        <CodeDisplay />
-      </div>
-    </div>
+    <ContentSection />
     <div id="infoPersonal" className="Info">
       <ProfileSection />
     </div>

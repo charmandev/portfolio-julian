@@ -1,0 +1,80 @@
+.contenido {
+  display: flex;
+  flex: 1;
+  margin-top: 30px;
+}
+
+.Texto {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Texto p {
+  color: white;
+  font-size: 3.5rem;
+  text-align: start;
+  font-weight: 700;
+  margin-left: 100px;
+}
+
+.text-celeste {
+  color: #16f2a6;
+}
+
+.text-rosa {
+  color: #ec4899;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+
+.boton {
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  color: #ec4899;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.boton:hover {
+  transform: scale(1.1);
+  background-color: #45967969;
+}
+
+.boton svg {
+  font-size: 2.5rem;
+}
+
+.CodeDescripcion {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorTexto {
+  width: 80%;
+  height: 400px;
+  font-size: 0.8rem;
+}
+
+.custom-buttons {
+  display: flex;
+  gap: 10px;
+}
