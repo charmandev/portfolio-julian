@@ -3,6 +3,8 @@ import "./Estudios.css";
 import Card from "../Card/Card";
 import { FaLaptop } from "react-icons/fa";
 import estudio from "../../assets/estudio.png";
+import githubCertification from "../../assets/githubCertification.png";
+import actionCertification from "../../assets/ActionCertification.png";
 
 const Estudios = () => {
   return (
@@ -46,20 +48,20 @@ const Estudios = () => {
           className="badge-link"
         >
           <img
-            src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"
-            alt="GitHub Badge"
+            src={githubCertification}
+            alt="GitHub Certification"
             className="badge-image"
           />
         </a>
         <a
-          href="https://www.python.org/"
+          href="https://www.action.org/"
           target="_blank"
           rel="noopener noreferrer"
           className="badge-link"
         >
           <img
-            src="https://img.shields.io/badge/Python-306998?style=flat&logo=python&logoColor=white"
-            alt="Python Badge"
+            src={actionCertification}
+            alt="Action Certification"
             className="badge-image"
           />
         </a>
