@@ -29,13 +29,8 @@
 .badge img {
   width: 150px;
   height: auto;
-  transition: filter 0.3s;
-  filter: drop-shadow(0 0 0 transparent); /* Invisible shadow initially */
-}
-
-.badge:hover img {
-  animation: heartbeat 1s infinite;
-  filter: drop-shadow(0 0 10px gold); /* Apply golden shadow on hover */
+  filter: drop-shadow(0 0 10px gold); /* Golden shadow always active */
+  animation: heartbeat 1s infinite; /* Animation always active */
 }
 
 @keyframes heartbeat {

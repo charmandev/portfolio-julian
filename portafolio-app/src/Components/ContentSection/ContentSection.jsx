@@ -45,7 +45,7 @@ const ContentSection = () => {
 
         <div className="botones">
           <a
-            href="https://github.com/tu-perfil"
+            href="https://github.com/julimax"
             className="boton"
             target="_blank"
             rel="noopener noreferrer"
@@ -53,21 +53,14 @@ const ContentSection = () => {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/tu-perfil"
+            href="https://www.linkedin.com/in/juli-gonzalez/"
             className="boton"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaLinkedin />
           </a>
-          <a
-            href="https://facebook.com/tu-perfil"
-            className="boton"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook />
-          </a>
+
           <a
             href="https://wa.me/543543313903"
             className="boton"

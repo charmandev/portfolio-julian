@@ -55,21 +55,21 @@ const Contacto = () => {
           </div>
           <div className="social-icons">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/julimax"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub size={24} />
             </a>
             <a
-              href="https://www.linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/juli-gonzalez/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin size={24} />
             </a>
             <a
-              href="https://wa.me/+8801608797655"
+              href="https://wa.me/543543313903"
               target="_blank"
               rel="noopener noreferrer"
             >

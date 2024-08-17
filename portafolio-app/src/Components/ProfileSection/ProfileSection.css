@@ -1,5 +1,6 @@
 .contenedor {
   width: 90%;
+  max-width: 1200px; /* Limita el ancho máximo en pantallas grandes */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,6 +9,7 @@
   margin: 0 auto;
   margin-top: 30px;
   border-bottom: solid 2px #22c55e;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
 }
 
 .text-container {
@@ -15,17 +17,20 @@
   color: #e2e8f0;
   flex: 1;
   padding-right: 20px;
+  box-sizing: border-box;
 }
 
 .title {
   color: #22c55e;
   font-size: 1.5rem;
-  margin-bottom: 16px;
+  margin-bottom: 12px; /* Ajuste de márgenes */
 }
 
 .description {
   font-size: 1rem;
   line-height: 1.6;
+  margin: 0; /* Elimina márgenes por defecto */
+  text-align: justify; /* Alineación para evitar espacios raros */
 }
 
 .image-container {
@@ -50,16 +55,32 @@
   transform: scale(1.05);
 }
 
+@media (max-width: 1024px) {
+  .contenedor {
+    padding: 40px; /* Reduce el padding en pantallas medianas */
+  }
+
+  .text-container {
+    padding-right: 15px; /* Reduce el padding a la derecha */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+  }
+}
+
 @media (max-width: 768px) {
   .contenedor {
-    width: 100%;
+    width: 95%;
     flex-direction: column-reverse;
+    padding: 30px; /* Reduce aún más el padding en pantallas pequeñas */
   }
 
   .text-container {
     width: 100%;
     text-align: start;
     margin-top: 20px;
+    padding-right: 0; /* Elimina el padding a la derecha en pantallas pequeñas */
   }
 
   .description {
@@ -68,6 +89,34 @@
 
   .image-container {
     width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .profile-image {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor {
+    padding: 20px; /* Aún menos padding en pantallas muy pequeñas */
+  }
+
+  .text-container {
+    padding: 0; /* Elimina el padding adicional */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Aumenta ligeramente el tamaño del texto */
+    text-align: justify;
+    /* Alinea el texto para una mejor lectura */
+  }
+  .text-container {
+    width: 80%;
+    color: #e2e8f0;
+    flex: 1;
+    padding-right: 20px;
+    box-sizing: border-box;
   }
 
   .profile-image {
