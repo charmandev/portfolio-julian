@@ -6,7 +6,12 @@ const IconItem = ({ icon: Icon, description, color }) => {
   return (
     <div className={`icon-item ${color}`}>
       <div className="icon-container">
-        <Icon className={`icon ${color}`} />
+        {/* Si el icono es una función (imagen), lo renderizamos directamente */}
+        {typeof Icon === "function" ? (
+          <Icon />
+        ) : (
+          <div className="icon-img">{Icon}</div>
+        )}
       </div>
       <div className="icon-description">{description}</div>
     </div>

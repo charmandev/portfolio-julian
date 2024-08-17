@@ -1,3 +1,4 @@
+/* IconItem.css */
 .icon-item {
   display: flex;
   flex-direction: column;
@@ -8,80 +9,37 @@
 
 .icon-container {
   position: relative;
+  width: 80px; /* Ajusta el tamaño del contenedor según sea necesario */
+  height: 80px; /* Ajusta el tamaño del contenedor según sea necesario */
 }
 
-.icon {
-  font-size: 6rem;
-  color: black;
-  background-color: #6a7094;
-  border-radius: 20px;
-  border: solid 5px #4509a7;
-  border-top-color: #7e8c8d;
-  padding: 4px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-  transition: transform 0.6s;
-}
-
-.icon:hover {
-  transform: scale(1.2);
+.icon-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-description {
+  margin-top: 8px;
   font-size: 1rem;
-  margin-top: 5px;
-  color: #fff;
-}
-
-.icon.html5 {
-  background-color: #e34c26;
-  border-color: #d93d1b;
-}
-
-.icon.css3 {
-  background-color: #1572b6;
-  border-color: #0a69e1;
-}
-
-.icon.js {
-  background-color: #f7df1e;
-  border-color: #f5c100;
-}
-
-.icon.react {
-  background-color: #61dafb;
-  border-color: #4fa3d1;
-}
-
-.icon.nodejs {
-  background-color: #68a063;
-  border-color: #4d7831;
+  color: #ffffff;
 }
 
 @media (max-width: 1024px) {
-  .icon {
-    font-size: 5rem;
-  }
-
   .icon-description {
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 768px) {
-  .icon {
-    font-size: 4.5rem;
-  }
-
   .icon-description {
     font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
-  .icon {
-    font-size: 4rem;
-  }
-
   .icon-description {
     font-size: 0.7rem;
   }
