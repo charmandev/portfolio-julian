@@ -1,5 +1,5 @@
 .accordion-wrapper {
-  width: 50%;
+  width: 30%;
   height: auto;
   margin: 0 auto;
   padding: 20px;
@@ -26,7 +26,7 @@
 .line {
   flex-grow: 1;
   height: 2px;
-  background-color: #167080;
+  background-color: #6e1680;
   z-index: 0;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .accordion-title {
-  background-color: #0794a7;
+  background-color: #a7079f;
   color: #000000;
   padding: 15px;
   cursor: pointer;
@@ -47,7 +47,7 @@
 }
 
 .accordion-title:hover {
-  background-color: #575757;
+  background-color: #066c94;
 }
 
 .accordion-content {
@@ -74,13 +74,13 @@
 /* Estilos adaptativos */
 @media (max-width: 768px) {
   .accordion-wrapper {
-    width: 80%;
+    width: 50%;
     font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .accordion-wrapper {
-    width: 80%;
+    width: 50%;
   }
 }
