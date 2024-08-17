@@ -1,5 +1,3 @@
-/* Slide.css */
-
 .slide-container {
   text-align: center;
   width: 100%;
@@ -69,27 +67,6 @@
 
 .icon-slider.paused {
   animation-play-state: paused;
-}
-
-.icon-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 24px; /* Ajusta según el tamaño deseado */
-  color: #fff; /* Color del texto */
-}
-
-.icon-item img {
-  width: 100px; /* Ajusta según el tamaño deseado */
-  height: auto; /* Mantén las proporciones */
-  margin-bottom: 8px; /* Espacio entre la imagen y el texto */
-}
-
-.icon-item p {
-  margin: 0;
-  font-size: 14px; /* Ajusta según el tamaño deseado */
 }
 
 /* Animaciones */
