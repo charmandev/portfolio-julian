@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import ProfileSection from "./Components/ProfileSection/ProfileSection";
-import About from "./Components/Routes/About";
+import BlogRoute from "./Components/Routes/BlogRoute"; // Asegúrate de que el nombre del componente sea BlogRoute
 import Slide from "./Components/Slide/Slide";
 import ScrollableCodeDisplay from "./Components/Experiencies/ScrollableCodeDisplay";
 import InfoProfesional from "./Components/InfoProfesional/InfoProfesional";
@@ -22,7 +22,7 @@ function App() {
         <div className="contenido">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/BlogRoute" element={<BlogRoute />} />
           </Routes>
         </div>
         <Footer />
@@ -41,6 +41,9 @@ const Home = () => (
     <div id="infoPersonal" className="Info">
       <ProfileSection />
     </div>
+    <div id="Certifications" className="insignias">
+      <Badges />
+    </div>
     <div id="Experiences" className="infoProfesional">
       <InfoProfesional />
     </div>
@@ -53,10 +56,7 @@ const Home = () => (
     <div id="Studies" className="EstudiosContainer">
       <Estudios />
     </div>
-    <div className="insignias">
-      <Badges />
-    </div>
-    {/* Aquí agregamos el nuevo contenedor Blog */}
+
     <div id="BlogSeccion" className="BlogsContainer">
       <Blogs />
     </div>

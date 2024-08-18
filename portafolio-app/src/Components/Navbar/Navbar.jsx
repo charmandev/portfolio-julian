@@ -41,6 +41,15 @@ const Navbar = () => {
                 About
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={() => handleSmoothScroll("Certifications")}
+              >
+                Certifications
+              </Link>
+            </li>
 
             <li className="nav-item">
               <Link

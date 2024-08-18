@@ -1,5 +1,6 @@
 import React from "react";
-import "./BlogCard.css"; // Import the CSS for styling
+import { useNavigate } from "react-router-dom";
+import "./BlogCard.css";
 
 const BlogCard = ({
   imageSrc,
@@ -9,8 +10,14 @@ const BlogCard = ({
   description,
   favoriteCount,
 }) => {
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate("/BlogRoute"); // Redirige a la página BlogRoute
+  };
+
   return (
-    <div className="blog-card">
+    <div className="blog-card" onClick={handleCardClick}>
       <img src={imageSrc} alt={title} className="blog-card-image" />
       <div className="blog-card-content">
         <span className="blog-card-time">{timeAgo}</span>

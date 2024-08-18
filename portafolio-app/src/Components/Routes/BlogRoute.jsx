@@ -1,12 +1,12 @@
 // src/About.jsx
 import React from "react";
-import "./About.css";
+import "./BlogRoute.css";
 
-const About = () => {
+const BlogRoute = () => {
   return (
     <div className="content">
-      <h1>Hola mundo!</h1>
+      <h1>Blog Route</h1>
     </div>
   );
 };
-export default About;
+export default BlogRoute;
