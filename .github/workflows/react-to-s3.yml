@@ -43,9 +43,9 @@ jobs:
           mv * ../$REPO/aws-s3/web/
 
       - name: Setup Node.js environment
-              uses: actions/setup-node@v4
-              with:
-                node-version: '20' 
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' 
 
       - name: Replace $REPO in main.tf
         run: |
@@ -70,14 +70,14 @@ jobs:
           sed -i "s/\$DOMINIO/${{ vars.DOMINIO }}/g" cloudfront.tf
 
       - name: Buld y mover todos los files
-              run: |
-                cd ../temp/portafolio-app
-                npm ci
-                npm run build
-                cd dist
-                ls ../../../
-                mkdir ../../../$REPO/aws-s3/web
-                mv * ../../../$REPO/aws-s3/web/
+        run: |
+            cd ../temp/portafolio-app
+            npm ci
+            npm run build
+            cd dist
+            ls ../../../
+            mkdir ../../../$REPO/aws-s3/web
+            mv * ../../../$REPO/aws-s3/web/
 
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
