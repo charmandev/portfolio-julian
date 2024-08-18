@@ -66,6 +66,8 @@ jobs:
 
       - name: Buld y mover todos los files
         run: |
+            ls
+            pwd
             cd ../temp/portafolio-app
             npm ci
             npm run build
