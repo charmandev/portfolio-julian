@@ -33,6 +33,7 @@ jobs:
           token: ${{ secrets.GH_PAT }}
 
       - name: Mover todos los files
+        if: false
         run: |
           cd ../temp
           mv * ../$REPO/aws-s3/web/
