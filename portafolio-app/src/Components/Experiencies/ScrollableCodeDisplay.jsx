@@ -2,9 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import CodeDisplay from "../CodeDisplay/CodeDisplay";
 import "./ScrollableCodeDisplay.css";
 
-const AccordionItem = ({ title, isActive, codeString }) => (
+const AccordionItem = ({ title, isActive, codeString, onExpand }) => (
   <div className={`accordion-item ${isActive ? "active" : ""}`}>
-    <div className="accordion-title">{title}</div>
+    <div className="accordion-title" onClick={onExpand}>
+      {title}
+    </div>
     <div
       className={`accordion-content ${isActive ? "active" : ""}`}
       style={{
@@ -44,6 +46,19 @@ const ScrollableCodeDisplay = () => {
     handleScroll(); // Llamada inicial para verificar la posición de los elementos
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleExpand = (index) => {
+    // Guardar la posición actual del scroll
+    const scrollPosition = window.scrollY;
+
+    // Ajustar el índice activo
+    setActiveIndex(index);
+
+    // Restaurar la posición del scroll después de un breve retraso
+    setTimeout(() => {
+      window.scrollTo({ top: scrollPosition, behavior: "auto" });
+    }, 500); // Asegúrate de que el tiempo de retraso sea mayor que la duración de la transición
+  };
 
   const codeSamples = [
     `const project1 = {
@@ -85,6 +100,7 @@ const ScrollableCodeDisplay = () => {
             title={`Proyecto ${index + 1}`}
             isActive={activeIndex === index}
             codeString={code}
+            onExpand={() => handleExpand(index)}
           />
         </div>
       ))}
