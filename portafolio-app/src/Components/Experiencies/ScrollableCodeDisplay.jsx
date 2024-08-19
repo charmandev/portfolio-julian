@@ -2,10 +2,17 @@ import React, { useState, useEffect, useRef } from "react";
 import CodeDisplay from "../CodeDisplay/CodeDisplay";
 import "./ScrollableCodeDisplay.css";
 
-const AccordionItem = ({ index, title, isActive, codeString }) => (
+const AccordionItem = ({ title, isActive, codeString }) => (
   <div className={`accordion-item ${isActive ? "active" : ""}`}>
     <div className="accordion-title">{title}</div>
-    <div className={`accordion-content ${isActive ? "active" : ""}`}>
+    <div
+      className={`accordion-content ${isActive ? "active" : ""}`}
+      style={{
+        maxHeight: isActive ? "1000px" : "0",
+        overflow: "hidden",
+        transition: "max-height 0.5s ease",
+      }}
+    >
       <CodeDisplay codeString={codeString} />
     </div>
   </div>
@@ -17,9 +24,7 @@ const ScrollableCodeDisplay = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.innerHeight + window.scrollY;
-      const marginTop = 100; // Adjust this value for margin from the top
-      const marginBottom = 300; // Adjust this value for margin from the bottom
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       accordionRefs.current.forEach((ref, index) => {
         if (ref) {
@@ -27,11 +32,8 @@ const ScrollableCodeDisplay = () => {
           const refTop = top + window.scrollY;
           const refBottom = bottom + window.scrollY;
 
-          // Activate the accordion if it is within the viewport margin range
-          if (
-            refBottom > window.scrollY - marginTop &&
-            refTop < scrollPosition - marginBottom
-          ) {
+          // Verificar si el acordeón está dentro del rango visible
+          if (scrollPosition >= refTop && scrollPosition <= refBottom) {
             setActiveIndex(index);
           }
         }
@@ -39,7 +41,7 @@ const ScrollableCodeDisplay = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Call it initially to check the position of elements
+    handleScroll(); // Llamada inicial para verificar la posición de los elementos
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -74,9 +76,12 @@ const ScrollableCodeDisplay = () => {
         <div className="line"></div>
       </div>
       {codeSamples.map((code, index) => (
-        <div key={index} ref={(el) => (accordionRefs.current[index] = el)}>
+        <div
+          key={index}
+          ref={(el) => (accordionRefs.current[index] = el)}
+          style={{ marginBottom: "60px" }} // Ajustar el margen inferior entre los acordeones
+        >
           <AccordionItem
-            index={index}
             title={`Proyecto ${index + 1}`}
             isActive={activeIndex === index}
             codeString={code}

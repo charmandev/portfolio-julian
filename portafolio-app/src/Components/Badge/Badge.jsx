@@ -16,7 +16,7 @@ const Badges = () => {
           >
             <img src={githubCertification} alt="GitHub Certification" />
           </a>
-          <p className="badge-title">GitHub Certification</p>
+          <p className="badge-title">GitHub Foundations</p>
         </div>
         <div className="badge">
           <a
@@ -26,7 +26,7 @@ const Badges = () => {
           >
             <img src={actionCertification} alt="Action Certification" />
           </a>
-          <p className="badge-title">Action Certification</p>
+          <p className="badge-title">GitHub Actions</p>
         </div>
       </div>
     </div>
