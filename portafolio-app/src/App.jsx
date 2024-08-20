@@ -41,9 +41,7 @@ const Home = () => (
     <div id="infoPersonal" className="Info">
       <ProfileSection />
     </div>
-    <div id="Certifications" className="insignias">
-      <Badges />
-    </div>
+
     <div id="Experiences" className="infoProfesional">
       <InfoProfesional />
     </div>

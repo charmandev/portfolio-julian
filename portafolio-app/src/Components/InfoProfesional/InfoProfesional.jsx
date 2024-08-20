@@ -3,10 +3,11 @@ import "./InfoProfesional.css";
 import Card from "../Card/Card";
 import { FaLaptop } from "react-icons/fa";
 import compuImage from "../../assets/compu.png";
-
+import Badges from "../Badge/Badge";
 const InfoProfesional = () => {
   return (
     <div className="ContenedorGeneralInfo">
+      <Badges />
       <div className="titleContainer">
         <h3>Experiencias</h3>
       </div>{" "}
