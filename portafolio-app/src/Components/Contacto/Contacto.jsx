@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaGithub,
   FaLinkedin,
@@ -10,6 +10,34 @@ import {
 import "./Contacto.css";
 
 const Contacto = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, message } = formData;
+    const phoneNumber = "+543543313903"; // Número de teléfono de WhatsApp al que enviarás el mensaje
+    const text = `Hola, soy ${name}. Mi correo es ${email}. Mensaje: ${message}`;
+
+    // Crear la URL de WhatsApp con el mensaje
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      text
+    )}`;
+
+    // Redirigir a la URL de WhatsApp
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <div className="contacto-section">
       <div className="contacto-header">
@@ -22,21 +50,39 @@ const Contacto = () => {
       </div>
       <div className="contacto-container">
         <div className="form-container">
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="input-group">
               <label>Your Name</label>
-              <input type="text" name="name" required />
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div className="input-group">
               <label>Your Email</label>
-              <input type="email" name="email" required />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div className="input-group">
               <label>Your Message</label>
-              <textarea name="message" rows="4" required></textarea>
+              <textarea
+                name="message"
+                rows="4"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
             </div>
             <button type="submit" className="submit-button">
-              Send Message
+              Send Message via WhatsApp
             </button>
           </form>
         </div>
