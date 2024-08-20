@@ -1,11 +1,11 @@
 /* General container for the section */
 .contacto-section {
-  color: #ffffff; /* White text */
+  color: #ffffff;
   padding: 50px 20px;
   font-family: "Arial", sans-serif;
   box-sizing: border-box;
-  max-width: 1200px; /* Limitar el ancho máximo para pantallas grandes */
-  margin: 0 auto; /* Centrar el contenido en la pantalla */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Header part */
@@ -18,7 +18,7 @@
   font-size: 36px;
   margin-bottom: 10px;
   font-weight: 400;
-  color: #059948; /* Green header color */
+  color: #059948;
 }
 
 .contacto-header p {
@@ -94,11 +94,7 @@
   padding: 15px;
   border: none;
   border-radius: 5px;
-  background: linear-gradient(
-    45deg,
-    #e91e63,
-    #9c27b0
-  ); /* Gradiente rosa a violeta */
+  background: linear-gradient(45deg, #e91e63, #9c27b0);
   color: #ffffff;
   font-size: 16px;
   cursor: pointer;
@@ -106,11 +102,7 @@
 }
 
 .submit-button:hover {
-  background: linear-gradient(
-    45deg,
-    #e74b85,
-    #530475
-  ); /* Gradiente más oscuro para el estado hover */
+  background: linear-gradient(45deg, #e74b85, #530475);
 }
 
 /* Styling for the contact information */
@@ -159,6 +151,7 @@
 
   .form-container {
     padding: 20px;
+    margin: 0 20px; /* Asegura un margen en pantallas medianas */
   }
 
   .submit-button {
@@ -178,6 +171,7 @@
 
   .form-container {
     padding: 15px;
+    margin: 0 15px; /* Reduce el margen en pantallas pequeñas */
   }
 
   .contact-form label {
@@ -214,7 +208,11 @@
 
   .form-container {
     padding: 12px;
-    max-width: 90%;
+    max-width: 70%;
+    margin: 0 10px; /* Ajusta el margen para pantallas muy pequeñas */
+  }
+  .info-container {
+    width: 70%;
   }
 
   .contact-form label {
