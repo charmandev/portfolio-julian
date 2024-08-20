@@ -75,8 +75,8 @@
 }
 
 .custom-buttons {
+  display: flex;
   gap: 10px;
-  flex-wrap: wrap;
 }
 @media (max-width: 480px) {
   .custom-buttons {
