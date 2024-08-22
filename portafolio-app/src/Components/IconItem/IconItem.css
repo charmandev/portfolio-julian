@@ -1,46 +1,73 @@
-/* IconItem.css */
-.icon-item {
+/* NewIconItem.css */
+
+.new-icon-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 10px;
+  justify-content: center;
+  margin: 12px; /* Ajusta el margen según sea necesario */
+  padding: 12px; /* Ajusta el padding según sea necesario */
+  border-radius: 12px; /* Ajusta el radio del borde según sea necesario */
+  background-color: var(
+    --icon-bg-color,
+    #1a1a1a
+  ); /* Color de fondo personalizado */
+  transition: background-color 0.3s; /* Transición suave para cambios de color */
+  width: 110px; /* Ajusta el tamaño según sea necesario */
+  height: 130px; /* Ajusta el tamaño según sea necesario */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
 }
 
-.icon-container {
-  position: relative;
-  width: 80px; /* Ajusta el tamaño del contenedor según sea necesario */
-  height: 80px; /* Ajusta el tamaño del contenedor según sea necesario */
-}
-
-.icon-img {
-  width: 100%;
-  height: 100%;
+.new-icon-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 90px; /* Ajusta el tamaño según sea necesario */
+  height: 90px; /* Ajusta el tamaño según sea necesario */
+  margin: 0; /* Elimina el margen */
 }
 
-.icon-description {
-  margin-top: 8px;
-  font-size: 1rem;
-  color: #ffffff;
+.new-icon-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ajusta el contenido para que se ajuste sin distorsionar */
 }
 
+.new-icon-description {
+  margin-top: 12px; /* Espacio entre el ícono y la descripción */
+  font-size: 1.1rem; /* Ajusta el tamaño del texto según sea necesario */
+  color: #f0f0f0; /* Color de texto blanco claro */
+  line-height: 1.3; /* Ajusta la altura de la línea para mejor espaciado */
+}
+
+/* Responsive styles */
 @media (max-width: 1024px) {
-  .icon-description {
-    font-size: 0.9rem;
+  .new-icon-item {
+    width: 90px;
+    height: 110px;
+  }
+  .new-icon-description {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .icon-description {
-    font-size: 0.8rem;
+  .new-icon-item {
+    width: 80px;
+    height: 100px;
+  }
+  .new-icon-description {
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  .icon-description {
-    font-size: 0.7rem;
+  .new-icon-item {
+    width: 70px;
+    height: 90px;
+  }
+  .new-icon-description {
+    font-size: 0.8rem;
   }
 }

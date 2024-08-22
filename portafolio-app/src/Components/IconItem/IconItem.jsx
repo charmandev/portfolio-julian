@@ -1,21 +1,20 @@
-// IconItem.jsx
+// NewIconItem.jsx
 import React from "react";
 import "./IconItem.css"; // Asegúrate de tener este archivo CSS
 
-const IconItem = ({ icon: Icon, description, color }) => {
+const NewIconItem = ({ icon: Icon, description, color }) => {
   return (
-    <div className={`icon-item ${color}`}>
-      <div className="icon-container">
-        {/* Si el icono es una función (imagen), lo renderizamos directamente */}
+    <div className="new-icon-item" style={{ backgroundColor: color }}>
+      <div className="new-icon-container">
         {typeof Icon === "function" ? (
           <Icon />
         ) : (
-          <div className="icon-img">{Icon}</div>
+          <div className="new-icon-img">{Icon}</div>
         )}
       </div>
-      <div className="icon-description">{description}</div>
+      <div className="new-icon-description">{description}</div>
     </div>
   );
 };
 
-export default IconItem;
+export default NewIconItem;
