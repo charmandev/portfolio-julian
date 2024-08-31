@@ -89,15 +89,15 @@ const Contacto = () => {
         <div className="info-container">
           <div className="contact-info">
             <FaEnvelope size={20} className="contact-icon" />
-            <span>abusaid7388@gmail.com</span>
+            <span>julimax951@gmail.com</span>
           </div>
           <div className="contact-info">
             <FaPhone size={20} className="contact-icon" />
-            <span>+8801608797655</span>
+            <span>+54 9 3543 31-3903</span>
           </div>
           <div className="contact-info">
             <FaMapMarkerAlt size={20} className="contact-icon" />
-            <span>Middle Badda, Dhaka, Bangladesh - 1212</span>
+            <span>Cordoba,Argentina</span>
           </div>
           <div className="social-icons">
             <a
