@@ -65,12 +65,22 @@
 .scrollContainer {
   width: 100%;
   height: auto;
+  background-image: url("./assets/b_shape5.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  padding-bottom: 100px;
 }
 
 .BlogContainer {
   width: 100%;
   height: auto;
   margin-top: 20px;
+}
+.ContactContainer {
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 1200px) {
