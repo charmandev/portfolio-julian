@@ -44,7 +44,7 @@
   gap: 10px;
   width: max-content; /* Ajusta el ancho del grid a su contenido */
   height: 100%; /* Ajusta la altura del contenedor */
-  animation: slide 20s linear infinite; /* Aplica la animación de desplazamiento */
+  animation: slide 14s linear infinite; /* Aplica la animación de desplazamiento */
 }
 
 .icon-item {

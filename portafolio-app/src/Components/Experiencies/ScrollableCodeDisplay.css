@@ -38,6 +38,7 @@
 }
 
 .accordion-title {
+  text-align: center;
   background-color: #cc0fdd60;
   color: #000000;
   padding: 15px;
