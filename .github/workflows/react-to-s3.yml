@@ -56,12 +56,17 @@ jobs:
           cd aws-s3
           sed -i "s/\$REPO/${{ env.REPO }}/g" variables.tf
 
-      - name: Replace $DOMINIO in variables.tf
+      - name: Replace $DOMINIO in route53.tf
         run: |
           cd aws-s3
           sed -i "s/\$DOMINIO/${{ vars.DOMINIO }}/g" route53.tf
 
       - name: Replace $DOMINIO in variables.tf
+        run: |
+          cd aws-s3
+          sed -i "s/\$DOMINIO/${{ vars.DOMINIO }}/g" variables.tf
+
+      - name: Replace $DOMINIO in cloudfront.tf
         run: |
           cd aws-s3
           sed -i "s/\$DOMINIO/${{ vars.DOMINIO }}/g" cloudfront.tf
