@@ -31,6 +31,7 @@ jobs:
         with:
           repository: charmandev/auto-web-to-s3
           token: ${{ secrets.GH_PAT }}
+          ref: full-deploy-with-dev
 
       - name: Mover todos los files
         if: false
