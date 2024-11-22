@@ -21,21 +21,25 @@ jobs:
         run: echo "REPO=$(echo ${{ github.repository }} | cut -d'/' -f 2 | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
       - name: Checkout
+        if: github.ref == 'refs/heads/main'
         uses: actions/checkout@v4
         with:
           ref: main
 
       - name: Move your files to a temporary directory
+        if: github.ref == 'refs/heads/main'
         run: |
           mkdir -p ../temp
           mv * ../temp/
 
       - name: Checkout
+        if: github.ref == 'refs/heads/develop'
         uses: actions/checkout@v4
         with:
           ref: develop
 
       - name: Move your files to a temporary dev directory
+        if: github.ref == 'refs/heads/develop'
         run: |
           mkdir -p ../temp-dev
           mv * ../temp-dev/
@@ -80,6 +84,7 @@ jobs:
           node-version: '20' 
 
       - name: Buld y mover todos los files prod
+        if: github.ref == 'refs/heads/main'
         run: |
             ls
             pwd
@@ -92,6 +97,7 @@ jobs:
             mv * ../../../$REPO/aws-s3/web/
 
       - name: Buld y mover todos los files dev
+        if: github.ref == 'refs/heads/develop'
         run: |
             ls
             pwd
@@ -146,12 +152,23 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_1600 }}
 
       - name: Terraform init and apply
+        if: github.ref == 'refs/heads/main'
+        run: |
+          cd aws-s3
+          terraform init
+          terraform apply -auto-approve \
+            -target=aws_s3_bucket.bucket_web \
+            -target=aws_s3_bucket_object.site_files
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_1600 }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_1600 }}
+
+      - name: Terraform init and apply
         if: github.ref == 'refs/heads/develop'
         run: |
           cd aws-s3
           terraform init
-          terraform apply -auto-approve -lock=false \
-            -target=aws_s3_bucket.bucket_web \
+          terraform apply -auto-approve \
             -target=aws_s3_bucket.bucket_web_dev \
             -target=aws_s3_bucket_object.site_files_dev
         env:
@@ -159,6 +176,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_1600 }}
 
       - name: Clean cloufront cache
+        if: github.ref == 'refs/heads/main'
         run: |
           cd aws-s3
           # Ejecutar Terraform y guardar el valor de cloudfront_domain_name en una variable
@@ -172,6 +190,7 @@ jobs:
           aws cloudfront create-invalidation --distribution-id $distribution_id --paths "/*" --profile default
 
       - name: Clean cloufront cache dev
+        if: github.ref == 'refs/heads/develop'
         run: |
           cd aws-s3
           # Ejecutar Terraform y guardar el valor de cloudfront_domain_name en una variable
