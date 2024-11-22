@@ -25,24 +25,23 @@ jobs:
         run: |
           mkdir -p ../temp
           mv * ../temp/
- 
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+
+      - name: Move your files to a temporary dev directory
+        run: |
+          mkdir -p ../temp-dev
+          mv * ../temp-dev/
+
       - name: Checkout private tools
         uses: actions/checkout@v4
         with:
           repository: charmandev/auto-web-to-s3
           token: ${{ secrets.GH_PAT }}
           ref: full-deploy-with-dev
-
-      - name: Mover todos los files
-        if: false
-        run: |
-          cd ../temp
-          mv * ../$REPO/aws-s3/web/
-
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20' 
 
       - name: Replace $REPO in main.tf
         run: |
@@ -71,7 +70,12 @@ jobs:
           cd aws-s3
           sed -i "s/\$DOMINIO/${{ vars.DOMINIO }}/g" cloudfront.tf
 
-      - name: Buld y mover todos los files
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' 
+
+      - name: Buld y mover todos los files prod
         run: |
             ls
             pwd
@@ -82,6 +86,18 @@ jobs:
             ls ../../../
             mkdir ../../../$REPO/aws-s3/web
             mv * ../../../$REPO/aws-s3/web/
+
+      - name: Buld y mover todos los files dev
+        run: |
+            ls
+            pwd
+            cd ../temp-dev/portafolio-app
+            npm ci
+            npm run build
+            cd dist
+            ls ../../../
+            mkdir ../../../$REPO/aws-s3/web-dev
+            mv * ../../../$REPO/aws-s3/web-dev/
 
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v3
