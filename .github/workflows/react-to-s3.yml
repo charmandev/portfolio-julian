@@ -20,6 +20,8 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Move your files to a temporary directory
         run: |
