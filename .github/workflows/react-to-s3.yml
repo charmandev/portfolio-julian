@@ -153,7 +153,7 @@ jobs:
           terraform apply \
             -target=aws_s3_bucket.bucket_web \
             -target=aws_s3_bucket.bucket_web_dev \
-            -target=aws_s3_bucket_object.site_files_dev["index.html"]
+            -target=aws_s3_bucket_object.site_files_dev
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_1600 }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_1600 }}
