@@ -150,7 +150,7 @@ jobs:
         run: |
           cd aws-s3
           terraform init
-          terraform apply \
+          terraform apply -auto-approve \
             -target=aws_s3_bucket.bucket_web \
             -target=aws_s3_bucket.bucket_web_dev \
             -target=aws_s3_bucket_object.site_files_dev
