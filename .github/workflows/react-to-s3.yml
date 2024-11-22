@@ -168,11 +168,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y expect
 
-      - name: Check Lock Status and Force Unlock if Necessary
+      - name: Check and Force Unlock Terraform State
         run: |
-          LOCK_STATUS=$(terraform state show -lock=false)
-          if echo "$LOCK_STATUS" | grep -q "Lock Info"; then
-            echo "State is locked. Attempting to unlock..."
+          echo "Checking if state is locked..."
+          LOCK_INFO=$(terraform show -json | jq '.values.root_module.resources[] | select(.type=="aws_dynamodb_table") | .values') || true
+          if [ -n "$LOCK_INFO" ]; then
+            echo "State appears locked. Attempting to unlock..."
             echo '#!/usr/bin/expect' > force_unlock.exp
             echo 'set timeout -1' >> force_unlock.exp
             echo 'spawn terraform force-unlock 1cb0cbb8-06f9-d3c7-7406-eed364e2c550' >> force_unlock.exp
