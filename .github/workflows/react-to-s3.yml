@@ -168,7 +168,7 @@ jobs:
         run: |
           cd aws-s3
           terraform init
-          terraform force-unlock 1cb0cbb8-06f9-d3c7-7406-eed364e2c550
+          echo "yes" | terraform force-unlock 1cb0cbb8-06f9-d3c7-7406-eed364e2c550
           terraform apply -auto-approve \
             -target=aws_s3_bucket.bucket_web_dev \
             -target=aws_s3_bucket_object.site_files_dev
