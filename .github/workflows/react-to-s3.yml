@@ -141,7 +141,7 @@ jobs:
           fi
 
       - name: Terraform init and apply
-        if: false
+        if: ${{ vars.INITIAL_CREATE == 'true' }}
         run: |
           cd aws-s3
           terraform init
@@ -152,7 +152,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_1600 }}
 
       - name: Terraform init and apply
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' && ${{ vars.INITIAL_CREATE == 'false' }}
         run: |
           cd aws-s3
           terraform init
@@ -190,7 +190,7 @@ jobs:
           aws cloudfront create-invalidation --distribution-id $distribution_id --paths "/*" --profile default
 
       - name: Clean cloufront cache dev
-        if: github.ref == 'refs/heads/develop'
+        if: github.ref == 'refs/heads/develop' && ${{ vars.INITIAL_CREATE == 'false' }}
         run: |
           cd aws-s3
           # Ejecutar Terraform y guardar el valor de cloudfront_domain_name en una variable
